@@ -1,0 +1,20 @@
+factorielle(2,2).
+factorielle(X,R):-Z is X-1,factorielle(Z,K),R is K*X,!.
+
+
+supprime([],_,[]).
+supprime([Y|Q],Y,Z):-supprime(Q,Y,Z),!.
+supprime([T|Q],Y,[T|Z]):-supprime(Q,Y,Z).
+
+filtre(X,[],X).
+filtre(X,[Y|Q],Z):-supprime(X,Y,R),filtre(R,Q,Z).
+
+longueur([],0).
+longueur([T|Q],N):-longueur(Q,L),N is L+1.
+
+entierListe(0,X,X):-!. 
+entierListe(N,Acc,Q):-L is N mod 10,K is N // 10,entierListe(K,[L|Acc],Q).
+entierListe(N,Q):-entierListe(N,[],Q).
+
+listeEntiersCroissant(X,X,[X]):-!.
+listeEntiersCroissant(I,J,[I|L]):-F is I+1,listeEntiersCroissant(F,J,L).
