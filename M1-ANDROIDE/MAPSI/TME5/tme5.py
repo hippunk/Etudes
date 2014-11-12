@@ -4,11 +4,12 @@ Created on Wed Oct 22 16:03:07 2014
 
 @author: 3401924
 """
-
-import math
-import numpy as np
+import pydot        
 import matplotlib.pyplot as plt
-from mpl_toolkits.mplot3d import Axes3D
+import matplotlib.image as mpimg
+import numpy as np
+import scipy.stats as stats
+
 
 # etant donné une BD data et son dictionnaire, cette fonction crée le
 # tableau de contingence de (x,y) | z
@@ -66,28 +67,119 @@ def translate_data ( data ):
 
 # fonction pour lire les données de la base d'apprentissage
 def read_csv ( filename ):
-    data = np.loadtxt ( filename, delimiter=',', dtype='string' ).T
+    data = np.loadtxt ( filename, delimiter=',', dtype='S' ).T
     names = data[:,0].copy ()
     data, dico = translate_data ( data )
     return names, data, dico
     
 def sufficient_statistics ( data, dico, x, y, z ):
-    res = create_contingency_table ( data, dico, 0, 1, [3,5,6])
+    res = create_contingency_table ( data, dico, x, y, z)
     zlen = len(res)
-    print res[0][1][0,:]
-
+    #print(res[0][1][0,:])
+    #print(res[0][1][1,:])
+    #print(dico)
+    nBz = 0
     total = 0
-    
+    #print(x)
     for z in range(0,zlen):
+       if(res[z][0] != 0):
+           nBz+=1
        xlen = len(res[z])
        for x in range(0,xlen):
-           ylen = len(res[z][1][x])
+           #print "z,x : ",z,x
+
+           #print res[0][1][1]
+           resZ1 = res[z][1]
+           #print "xlen",resZ1[1]
+           
+           ylen = len(resZ1[x])
            for y in range(0,ylen):
-               if(res[z][0] != 0 and sum(res[z][1][:,y]) != 0 and sum(res[z][1][x,:])):
-                   print ((res[z][1][x][y]-((sum(res[z][1][:,y])+sum(res[z][1][x,:]))/res[z][1][x][y]))/(sum(res[z][1][:,y])*sum(res[z][1][x,:])/res[z][0]))
+               Nxyz = res[z][1][x][y]
+               Nxz = sum(res[z][1][x,:])
+               Nyz = sum(res[z][1][:,y])
+               Nz = res[z][0]
+               #print("Ligne : ",res[z])
+               #print("x : ",x," y : ",y," z :",z)
+               #print("Nxyz : ",Nxyz," Nxz : ",Nxz," Nyz : ",Nyz," Nz :",Nz)
+               num = 0
+               denom = 0
+               result = 0
+               if(Nz != 0):
+                   num = (Nxyz - (Nxz*Nyz/Nz))**2 
+                   denom = Nxz*Nyz/Nz
                
+               if(denom != 0):
+                   result = num/denom
+                   #print(result)
+                   total += result
+    dof = nBz*(len(res[0][1][0,:])-1)*(len(res[0][1][:,0])-1)
+    return(total,dof)
         
-names,data,dico = read_csv("2014_tme5_asia.csv")
+def indep_score( data, dico, x, y, z ):
+    x2,DoF = sufficient_statistics ( data, dico, x, y, z )
+    res = create_contingency_table ( data, dico, x, y, z)
+    dMin = 5*len(res[0][1][0,:])*len(res[0][1][:,0])*len(res[0])
+    #print("dmin :",dMin)
+    if(len(data[0]) < dMin):
+        print("prout")
+        result = (-1,1)    
+    else:
+        result = stats.chi2.sf ( x2, DoF )
+    return result
 
+def best_candidate ( data, dico, x, z, alpha ):
+    best = 100000000
+    bestY = []
+    for y in range(0,x):
+        tmp = indep_score( data, dico, x, y, z )
+        if(tmp <= alpha and tmp < best):
+            best = tmp
+            bestY = [y]
+    return bestY
+    
+def create_parents ( data, dico, x, alpha ):
+    y = 0
+    z = []
+    while(y != []):
+        y = best_candidate ( data, dico, x, z, alpha )
+        z+=y
+    return z
+    
+def learn_BN_structure ( data, dico, alpha ):
+    list = []
+    for i in range(0,len(data)):
+        x = create_parents( data, dico, i,alpha)
+        list.append(x)
+    print "learn_BN_structure",list
+    return(list)
+        
+def display_BN ( node_names, bn_struct, bn_name, style ):
+    graph = pydot.Dot( bn_name, graph_type='digraph')
 
-sufficient_statistics( data, dico, 0, 1, [3,5,6])
+    # création des noeuds du réseau
+    for name in node_names:
+        new_node = pydot.Node( name, 
+                               style="filled",
+                               fillcolor=style["bgcolor"],
+                               fontcolor=style["fgcolor"] )
+        graph.add_node( new_node )
+
+    # création des arcs
+    for node in range ( len ( node_names ) ):
+        parents = bn_struct[node]
+        for par in parents:
+            new_edge = pydot.Edge ( node_names[par], node_names[node] )
+            graph.add_edge ( new_edge )
+
+    # sauvegarde et affaichage
+    outfile = bn_name + '.png'
+    graph.write_png( outfile )
+    img = mpimg.imread ( outfile )
+    plt.imshow( img )
+    
+names,data,dico = read_csv("2014_tme5_alarm.csv")
+
+style = { "bgcolor" : "#6b85d1", "fgcolor" : "#FFFFFF" }
+resultats = learn_BN_structure( data, dico, 0.05)
+
+display_BN(names,resultats,"Asia",style)

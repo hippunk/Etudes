@@ -1,0 +1,13 @@
+#include<stdio.h>
+#include<stdlib.h>
+#include"arithZn.h"
+
+void affiche_tab(int tab[25])
+
+int main(){
+
+	printf("Hello World\n");
+	printf("pgcd %i\n",iMy_pgcd(1071,1029));
+
+	return EXIT_SUCCESS;
+}
