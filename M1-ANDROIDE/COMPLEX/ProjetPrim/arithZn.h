@@ -3,6 +3,8 @@
 
 #include<gmp.h>
 
+/*Exposant modulaire avec implémentation fast exp résultat format mpz_t*/
+void mpzExpo_mod(mpz_t result, mpz_t m, mpz_t e, mpz_t n);
 
 /*Renvoi le maximum entre a et b au format mpz_t*/
 void mpz_max(mpz_t result,mpz_t a, mpz_t b);
@@ -18,8 +20,16 @@ void mpzMy_pgcdMemSave(mpz_t result,mpz_t a, mpz_t b,mpz_t min,mpz_t max,mpz_t t
 
 void mpzMy_inverse(mpz_t result, mpz_t a, mpz_t n);
 
+/**
+*	Les fonctions avec int sont destinées aux tests algos pour comparer avec les mpz_t
+*/
+
+/*Exposant modulaire fastExp avec int*/
+int iMod_exp(int m, int e, int n);
+
 /*Algo euclide pgcd avec int*/
 int iMy_pgcd(int a, int b);
 
 int iMy_inverse(int a, int b);
+
 #endif

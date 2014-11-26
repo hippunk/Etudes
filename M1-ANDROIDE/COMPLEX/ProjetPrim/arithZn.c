@@ -4,6 +4,32 @@
 #include<math.h>
 #include"arithZn.h"
 
+void mpzExpo_mod(mpz_t result, mpz_t m, mpz_t e, mpz_t n){
+
+	int i = 0;
+	size_t fin = 0;
+
+  	mpz_t t;
+  	mpz_t m;
+  	mpz_t tmp;
+
+       	mpz_init (t);
+       	mpz_init (tmp);
+
+	mpz_set(t,m);
+	mpz_set(result,b);
+
+	fin = mpz_sizeinbase(e,2);
+
+	for(i = 0;i < fin;i++){//Comparaison entre i et e
+		if(
+	}	
+
+
+	mpz_clear(t);
+	mpz_clear(tmp);
+}
+
 
 void mpz_max(mpz_t result, mpz_t a,mpz_t b){
 
@@ -133,6 +159,20 @@ void mpzMy_inverse(mpz_t result, mpz_t a, mpz_t n)
 	mpz_clear(tmp);
 	mpz_clear(tmpa);
 	mpz_clear(tmpn);
+}
+
+int iMod_exp(int m, int e, int n){
+
+	int t = m;
+	int i = 0;
+	
+	
+
+	for(i = 1;i < e;i++){
+		t = (t*m)%n;
+	}	
+
+	return t;
 }
 
 int iMy_pgcd(int a, int b){
