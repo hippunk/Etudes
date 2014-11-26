@@ -1,52 +1,66 @@
 # -*- coding: utf-8 -*-
 """
-Created on Wed Nov 19 16:26:54 2014
+Created on Wed Nov 19 15:19:03 2014
 
 @author: arthur
 """
 
-#!/usr/bin/python
-
-# Copyright 2014, Gurobi Optimization, Inc.
-
-# This example formulates and solves the following simple MIP model:
-#  maximize
-#        x +   y + 2 z
-#  subject to
-#        x + 2 y + 3 z <= 4
-#        x +   y       >= 1
-#  x, y, z binary
-
 from gurobipy import *
+import numpy as np    
 
-try:
+def genUtils(M,N):
+    u = np.ones((M,N))
+    
+    for i in range(N):
+        for j in range(M):
+            u[i][j]=np.round(np.random.triangular(0,M/2,M))
+            
+    return u
 
-    # Create a new model
-    m = Model("mip1")
+#N = np.random.random_integers(5,15)
+N = 100
+M = N
 
-    # Create variables
-    x = m.addVar(vtype=GRB.BINARY, name="x")
-    y = m.addVar(vtype=GRB.BINARY, name="y")
-    z = m.addVar(vtype=GRB.BINARY, name="z")
+u = genUtils(M,N)
+x = []
+print u
+         
 
-    # Integrate new variables
-    m.update()
+m = Model("prjMogpl")     
 
-    # Set objective
-    m.setObjective(x + y + 2 * z, GRB.MAXIMIZE)
+for i in range(N):
+    tmp = []
+    for j in range(M):
+        name = "x"+str(i)+","+str(j)
+        tmp.append(m.addVar(vtype=GRB.BINARY, name=name))
+    x.append(tmp)
 
-    # Add constraint: x + 2 y + 3 z <= 4
-    m.addConstr(x + 2 * y + 3 * z <= 4, "c0")
+m.update() 
+       
+obj = LinExpr()
+obj = 0       
 
-    # Add constraint: x + y >= 1
-    m.addConstr(x + y >= 1, "c1")
+for i in range(N):
+    for j in range(M):
+        obj += u[i][j]*x[i][j]
+        
+m.setObjective(obj,GRB.MAXIMIZE)
 
-    m.optimize()
+for i in range(N):
+    m.addConstr(quicksum(x[i][j] for j in range(M))==1,"contrainte%d" % i)
+    
+for j in range(M):
+    m.addConstr(quicksum(x[i][j] for i in range(N))==1,"contrainte%d" % (N+j))
 
-    for v in m.getVars():
-        print('%s %g' % (v.varName, v.x))
-
-    print('Obj: %g' % m.objVal)
-
-except GurobiError:
-    print('Error reported')
+m.optimize()
+"""
+print ""
+print "Liste des objets :"
+print u 
+print 'Solution optimale : '
+for i in range(N):
+    for j in range(M):
+        print 'x'+str(i)+str(j), '=', x[i][j].x
+print ""
+print 'Valeur de la fonction objectif :', m.objVal
+"""
