@@ -1,0 +1,59 @@
+#include<stdio.h>
+#include<stdlib.h>
+#include<time.h>
+
+int **creerListeObjet(int nbObjets){
+		
+	int i = 0;
+	int ** tab;
+	tab = malloc(sizeof(int*)*2);
+
+	for(i = 0;i<2;i++){
+		tab[i] = malloc(sizeof(int)*nbObjets);
+	}	
+	return tab;
+}
+
+int * creerLigneValeurs(int taille){
+	int i = 0;
+	int * tab;	
+	tab = malloc(sizeof(int)*taille);
+	return tab;
+}
+
+void detruireLigneValeurs(int ** tab){	
+	
+	free(*tab);
+	*tab = NULL;
+}
+
+
+void detruireListeObjet(int *** tab){
+	printf("Dans detruireListeObjet\n");
+	free((*tab)[0]);
+	free((*tab)[1]);
+	free(*tab);
+	*tab = NULL;	
+} 
+
+void afficherListeObjet(int ** tab,int taille){
+	int i = 0;
+	printf("Tableau des valeurs : ");
+	for(i = 0;i < taille;i++)
+		printf("%3i",tab[0][i]);
+	printf("\nTableau des poids   : ");
+	for(i = 0;i < taille;i++)
+		printf("%3i",tab[1][i]);
+	printf("\n");
+}
+
+
+int main(){
+	
+	int ** listeObjets=creerListeObjet(10);
+	afficherListeObjet(listeObjets,10);	
+	detruireListeObjet(&listeObjets);	
+	
+	
+	return EXIT_SUCCESS;
+}
