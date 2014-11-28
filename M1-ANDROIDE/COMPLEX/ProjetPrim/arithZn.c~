@@ -15,6 +15,10 @@ void mpzExpo_mod(mpz_t result, mpz_t m, mpz_t e, mpz_t n){
 
        	mpz_init (t);
        	mpz_init (tmp);
+
+	mpz_set(t,m);
+	mpz_set(result,b);
+
 	fin = mpz_sizeinbase(e,2);
 
 	for(i = 0;i < fin;i++){//Comparaison entre i et e

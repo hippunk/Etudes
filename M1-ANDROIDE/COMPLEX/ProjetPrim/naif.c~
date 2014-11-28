@@ -1,0 +1,49 @@
+#include<stdio.h>
+#include<stdlib.h>
+#include"naif.h"
+#include<gmp.h>
+
+int first_test(mpz_t n){
+
+	int test = 1;
+	int sortie = 0;
+	mpz_t nb, max,mod;
+
+       	mpz_init (nb);
+       	mpz_init (max);
+	mpz_init (mod);
+
+	mpz_root(max, n, 2); //need debug
+	//gmp_printf ("\nDebug racine carré : %Zd\n", max);
+	//mpz_out_str(stdout, 10, max);
+
+	mpz_set_str(nb,"2",10);
+	//gmp_printf ("\nDebug compteur : %Zd\n", nb);
+
+	if(mpz_cmp_si(n,0)== 0 || mpz_cmp_si(n,1)== 0){
+		test = 0;
+		sortie = 1;
+	}
+
+	for(sortie = 0;sortie!=1 && mpz_cmp(nb,max)<=0;mpz_add_ui(nb,nb,1)){
+
+
+		//printf("test : %i\n", test);
+		mpz_mod(mod,n,nb);
+		//gmp_printf("Debug tour num %Zd : n = %Zd, nb = %Zd, n mod nb = %Zd\n",nb,n,nb,mod);
+
+		if(mpz_cmp_si(mod,0)== 0){
+			//printf("Debug : Sortie\n");
+			test = 0;
+			sortie = 1;
+		}
+	}
+
+
+	mpz_clear(nb);
+	mpz_clear(max);
+	mpz_clear(mod);
+	//printf("test : %i\n", test);
+	return test;
+
+}

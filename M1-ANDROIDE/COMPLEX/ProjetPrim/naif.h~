@@ -1,0 +1,8 @@
+#ifndef NAIF_H
+#define NAIF_H
+
+#include<gmp.h>
+
+int first_test(mpz_t n);
+
+#endif
