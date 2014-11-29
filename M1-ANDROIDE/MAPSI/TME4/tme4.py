@@ -140,31 +140,35 @@ def dessine_1_normale ( params ):
     
 def Q_i(data,current_params,current_weights):
     result = np.zeros((len(data),2))
+    
+    vra1 = 0
+    vra2 = 0
+
     for i in range (0,len(data)):
         result[i][0] = 1.0*normale_bidim(data[i][0],data[i][1],current_params[0]) * 1.0*current_weights[0]
         result[i][1] = 1.0*normale_bidim(data[i][0],data[i][1],current_params[1]) * 1.0*current_weights[1]
         temp = result[i][1] + result[i][0]
+    
+
+        if(result[i][0] != 0):
+            vra1 += math.log(result[i][0])
+        else:
+            vra1 += -100000000
+        if(result[i][1] != 0):
+            vra2 += math.log(result[i][1])    
+        else:
+            vra2 += -100000000    
+        
         result[i][0] /=  temp
         result[i][1] /=  temp
+    
+
         
-    return result
+    return result,vra1,vra2
     
 def M_step( data, Q, current_params, current_weights ):
     mu_x0, mu_z0, sigma_x0, sigma_z0, rho0 = params[0]
     mu_x1, mu_z1, sigma_x1, sigma_z1, rho1 = params[1]
-#    sommeX = 0.0
-#    sommeY = 0.0
-#    B = 0.0
-#    C=  0.0
-#    D = 0.0
-#    E=  0.0
-#    for i in range (0, len(data)) :
-#        sommeX = sommeX + Q[i][0]
-#        sommeY = sommeY + Q[i][1]
-#        B= B + Q[i][0] *data[i][0]
-#        C= C + Q[i][1] *data[i][0]
-#        E =      
-
         
     pi0 = sum(Q[:,0])/sum(Q[:,0]+Q[:,1])
     pi1 = sum(Q[:,1])/sum(Q[:,0]+Q[:,1])
@@ -229,26 +233,31 @@ params = np.array ( [(mean1 - 0.2, mean2 - 1, std1, std2, 0),
 weights = np.array ( [0.4, 0.6] )
 
 res_EM = []
+vra = []
+vra2 = []
 res_EM.append([params,weights])
 
-for i in range(0,200):
-    Q = Q_i(data,params,weights)
+for i in range(0,20):
+    Q,v,v2 = Q_i(data,params,weights)
+    vra.append(v)
+    vra2.append(v2)
+    
     params,weights = M_step(data,Q,params,weights)
     res_EM.append(M_step(data,Q,params,weights))
 
 
-bounds = find_video_bounds ( data, res_EM )
+#bounds = find_video_bounds ( data, res_EM )
 
 # création de l'animation : tout d'abord on crée la figure qui sera animée
-fig = plt.figure ()
-ax = fig.gca (xlim=(bounds[0], bounds[1]), ylim=(bounds[2], bounds[3]))
+#fig = plt.figure ()
+#ax = fig.gca (xlim=(bounds[0], bounds[1]), ylim=(bounds[2], bounds[3]))
 
 #Affichage de l'annimation
-anim = animation.FuncAnimation(fig, animate,
-                               frames = len ( res_EM ), interval=500 )
-plt.show ()
+#anim = animation.FuncAnimation(fig, animate,frames = len ( res_EM ), interval=500 )
 
 
+plt.figure()               
+plt.plot(np.arange(0, 20),vra)
 # affichage de la figure
 #bounds = find_bounds ( data, params )
 #fig = plt.figure ()

@@ -18,11 +18,12 @@ def genUtils(M,N):
     return u
 
 #N = np.random.random_integers(5,15)
-N = 100
+N = 3
 M = N
 
 u = genUtils(M,N)
 x = []
+u = [[2,0,0],[0,1,0],[0,3,1]]
 print u
          
 
@@ -38,11 +39,13 @@ for i in range(N):
 m.update() 
        
 obj = LinExpr()
-obj = 0       
+obj = 0      
 
 for i in range(N):
     for j in range(M):
         obj += u[i][j]*x[i][j]
+        
+print "obj : ",obj
         
 m.setObjective(obj,GRB.MAXIMIZE)
 
@@ -53,7 +56,7 @@ for j in range(M):
     m.addConstr(quicksum(x[i][j] for i in range(N))==1,"contrainte%d" % (N+j))
 
 m.optimize()
-"""
+
 print ""
 print "Liste des objets :"
 print u 
@@ -63,4 +66,3 @@ for i in range(N):
         print 'x'+str(i)+str(j), '=', x[i][j].x
 print ""
 print 'Valeur de la fonction objectif :', m.objVal
-"""
