@@ -3,6 +3,7 @@
 #include"arithZn.h"
 #include"naif.h"
 #include "test.h"
+#include "carmichael.h"
 #include<gmp.h>
 #include <sys/time.h>
 
@@ -37,6 +38,28 @@ void test_premiers(){
 	}
 	printf ("Nombre de premiers trouvé : %i\n", cpt);
 	mpz_clear(integ2);
+}
+
+void test_pow(){
+
+  	mpz_t integ1;
+   	mpz_t integ2;
+   	mpz_t res;
+   	
+       	mpz_init (integ1);
+       	mpz_init (integ2);
+       	mpz_init (res);
+       	
+	mpz_set_str(integ1,"5",10);
+	mpz_set_str(integ2,"3",10);
+
+	
+	mpz_pow(res,integ1,integ2);
+	gmp_printf ("pow : %Zd\n", res);
+
+	mpz_clear(integ1);
+	mpz_clear(integ2);
+	mpz_clear(res);
 }
 
 void test_1min_premiers(){

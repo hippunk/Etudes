@@ -11,4 +11,6 @@ void test_premiers();
 /*Affiche le dernier nombre premier calculé en 1 minute*/
 void test_1min_premiers();
 
+void test_pow();
+
 #endif
