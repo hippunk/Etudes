@@ -50,10 +50,12 @@ print "obj : ",obj
 m.setObjective(obj,GRB.MAXIMIZE)
 
 for i in range(N):
-    m.addConstr(quicksum(x[i][j] for j in range(M))==1,"contrainte%d" % i)
+    m.addConstr(quicksum(x[i][j] for j in range(M))==1,
+                                    "contrainte%d" % i)
     
 for j in range(M):
-    m.addConstr(quicksum(x[i][j] for i in range(N))==1,"contrainte%d" % (N+j))
+    m.addConstr(quicksum(x[i][j] for i in range(N))==1,
+                                    "contrainte%d" % (N+j))
 
 m.optimize()
 

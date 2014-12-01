@@ -116,7 +116,7 @@ int is_Carmichael(n){
     if(first_test(i)==1){
       if(((n%i)==0) && (test%(i-1)==0)){
 	cpt=cpt/i;
-	/*printf("%d\n",i);*/
+	printf("%d\n",test);
       }
     }
     if(cpt==1)

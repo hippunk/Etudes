@@ -38,7 +38,7 @@ int main(int argc, char** argv){
   if(y==1)
     printf("%d est premier.\n",j);
   else
-  printf("%d n'est pas premier.\n",j);
+  printf("%d n'est pas premier.\n",j);*/
 
   // Test de is_Carmichael(n)
   printf("\n-----------------\n\n");
@@ -49,12 +49,12 @@ int main(int argc, char** argv){
   if(r==1)
     printf("%d est un nombre de Carmichael.\n",c);
   else
-  printf("%d n'est pas un nombre de Carmichael.\n",c);*/
+  printf("%d n'est pas un nombre de Carmichael.\n",c);
 
-  srand(time(NULL));
+  /*srand(time(NULL));
   int r=GenPKRSA(10);
 
-  printf("blabla %d\n",r);
+  printf("blabla %d\n",r);*/
 
 
   return 0;
