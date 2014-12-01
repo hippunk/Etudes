@@ -1,0 +1,8 @@
+#ifndef FERMAT_H
+#define FERMAT_H
+
+#include<gmp.h>
+
+void mpzTestFermat(mpz_t n);
+
+#endif

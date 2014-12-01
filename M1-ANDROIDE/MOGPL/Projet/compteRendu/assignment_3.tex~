@@ -1,0 +1,285 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Short Sectioned Assignment
+% LaTeX Template
+% Version 1.0 (5/5/12)
+%
+% This template has been downloaded from:
+% http://www.LaTeXTemplates.com
+%
+% Original author:
+% Frits Wenneker (http://www.howtotex.com)
+%
+% License:
+% CC BY-NC-SA 3.0 (http://creativecommons.org/licenses/by-nc-sa/3.0/)
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%----------------------------------------------------------------------------------------
+%	PACKAGES AND OTHER DOCUMENT CONFIGURATIONS
+%----------------------------------------------------------------------------------------
+
+\documentclass[paper=a4, fontsize=11pt]{scrartcl} % A4 paper and 11pt font size
+
+\usepackage[francais]{babel}
+\usepackage[T1]{fontenc} % Use 8-bit encoding that has 256 glyphs
+%\usepackage{fourier} % Use the Adobe Utopia font for the document - comment this line to return to the LaTeX default
+\usepackage{amsmath,amsfonts,amsthm} % Math packages
+
+\usepackage{lipsum} % Used for inserting dummy 'Lorem ipsum' text into the template
+
+\usepackage{sectsty} % Allows customizing section commands
+\allsectionsfont{\normalfont\scshape} % Make all sections centered, the default font and small caps
+
+\usepackage[usenames,dvipsnames]{color} % Required for custom colors
+\usepackage{graphicx} % Required to insert images
+\usepackage{listings} % Required for insertion of code
+
+\usepackage{fancyhdr} % Custom headers and footers
+\pagestyle{fancyplain} % Makes all pages in the document conform to the custom headers and footers
+\fancyhead{} % No page header - if you want one, create it in the same way as the footers below
+\fancyfoot[L]{} % Empty left footer
+\fancyfoot[C]{} % Empty center footer
+\fancyfoot[R]{\thepage} % Page numbering for right footer
+\renewcommand{\headrulewidth}{0pt} % Remove header underlines
+\renewcommand{\footrulewidth}{0pt} % Remove footer underlines
+\setlength{\headheight}{13.6pt} % Customize the height of the header
+
+\numberwithin{equation}{section} % Number equations within sections (i.e. 1.1, 1.2, 2.1, 2.2 instead of 1, 2, 3, 4)
+\numberwithin{figure}{section} % Number figures within sections (i.e. 1.1, 1.2, 2.1, 2.2 instead of 1, 2, 3, 4)
+\numberwithin{table}{section} % Number tables within sections (i.e. 1.1, 1.2, 2.1, 2.2 instead of 1, 2, 3, 4)
+
+\setlength\parindent{0pt} % Removes all indentation from paragraphs - comment this line for an assignment with lots of text
+
+%----------------------------------------------------------------------------------------
+%	TITLE SECTION
+%----------------------------------------------------------------------------------------
+
+\newcommand{\horrule}[1]{\rule{\linewidth}{#1}} % Create horizontal rule command with 1 argument of height
+
+\title{	
+\normalfont \normalsize 
+\textsc{Universit\'e Paris 6, Master ANDROIDE} \\ [25pt] % Your university, school and/or department name(s)
+\horrule{0.5pt} \\[0.4cm] % Thin top horizontal rule
+\huge Projet MOGPL \\ % The assignment title
+\horrule{2pt} \\[0.5cm] % Thick bottom horizontal rule
+}
+
+\author{Olivier Bachollet, Arthur Ramolot} % Your name
+
+\date{\normalsize\today} % Today's date or a custom date
+
+\begin{document}
+
+\maketitle % Print the title
+
+%----------------------------------------------------------------------------------------
+%	CODE INCLUSION CONFIGURATION
+%----------------------------------------------------------------------------------------
+
+\definecolor{MyDarkGreen}{rgb}{0.0,0.4,0.0} % This is the color used for comments
+\lstloadlanguages{Python} % Load Perl syntax for listings, for a list of other languages supported see: ftp://ftp.tex.ac.uk/tex-archive/macros/latex/contrib/listings/listings.pdf
+\lstset{language=Python, % Use Perl in this example
+        frame=single, % Single frame around code
+        basicstyle=\small\ttfamily, % Use small true type font
+        keywordstyle=[1]\color{Blue}\bf, % Perl functions bold and blue
+        keywordstyle=[2]\color{Purple}, % Perl function arguments purple
+        keywordstyle=[3]\color{Blue}\underbar, % Custom functions underlined and blue
+        identifierstyle=, % Nothing special about identifiers                                         
+        commentstyle=\usefont{T1}{pcr}{m}{sl}\color{MyDarkGreen}\small, % Comments small dark green courier font
+        stringstyle=\color{Purple}, % Strings are purple
+        showstringspaces=false, % Don't put marks in string spaces
+        tabsize=5, % 5 spaces per tab
+        %
+        % Put standard Perl functions not included in the default language here
+        morekeywords={rand},
+        %
+        % Put Perl function parameters here
+        morekeywords=[2]{on, off, interp},
+        %
+        % Put user defined functions here
+        morekeywords=[3]{test},
+       	%
+        morecomment=[l][\color{Blue}]{...}, % Line continuation (...) like blue comment
+        numbers=left, % Line numbers on left
+        firstnumber=1, % Line numbers start with line 1
+        numberstyle=\tiny\color{Blue}, % Line numbers are blue and small
+        stepnumber=5 % Line numbers go in steps of 5
+}
+
+% Creates a new command to include a perl script, the first parameter is the filename of the script (without .pl), the second parameter is the caption
+\newcommand{\cscript}[2]{
+\begin{itemize}
+\item[]\lstinputlisting[caption=#2,label=#1]{#1.py}
+\end{itemize}
+}
+
+%----------------------------------------------------------------------------------------
+%	TABLE OF CONTENTS
+%----------------------------------------------------------------------------------------
+
+%\setcounter{tocdepth}{1} % Uncomment this line if you don't want subsections listed in the ToC
+
+\newpage
+\tableofcontents
+\newpage
+
+
+%----------------------------------------------------------------------------------------
+%	Premi\`ere mod\'elisation du probl\`eme
+%----------------------------------------------------------------------------------------
+
+\newpage
+\section{Premi\`ere mod\'elisation du probl\`eme}
+
+\subsection{Mod\'elisation du probl\`eme}
+
+Fonction d'optimisation : \\\\
+$\max\sum_{i=1}^{n}\sum_{j=1}^{m} u_{ij}.x_{ij}$\\\\
+Contraintes :\\\\
+$\prod_{i=1}^{n}\sum_{j=1}^{m}x_{ij} = 1$\\
+$\prod_{j=1}^{n}\sum_{i=1}^{m}x_{ij} = 1$\\
+$x_{ij}\in\{0,1\}, \forall i,j\in[0,n]$\\
+$u_{ij}\in[0,M]$
+
+\cscript{P0}{Programme lin\'eaire P0 avec pygurobi}
+
+\subsection{Essais num\'eriques}
+
+\begin{tabular}{|*{5}{c|}}
+    \hline
+     n  & t  & Moyenne  & Minimum  & Maximum\\
+    \hline
+     10  & 0.01  & 7.68  & 5.3  & 9.1\\
+    \hline
+     50  & 0.18  & 8.90  & 7.4 & 10\\
+    \hline
+     100  & 0.56  & 9.26 & 8.0 & 10\\
+    \hline
+     500  & 12.73 & 9.80 & 9.0 & 10\\
+    \hline
+     1000  & 69.79 & 9.98 & 9.0 & 10\\
+    \hline
+\end{tabular}
+
+Comme attendu, plus n est grand plus le calcul est long.
+Augmenter M n'influe pas sur les temps de calcul. 
+Les autres donn\'ees \'evoluent proportionellement avec la valeur maximale des objets. 
+
+%----------------------------------------------------------------------------------------
+%	Approche \'egalitariste
+%----------------------------------------------------------------------------------------
+
+\newpage
+\section{Approche \'egalitariste}
+
+\subsection{L'approche flot max}
+
+Pour \'ecrire le probl\`eme de l'existence d'une affectation dans laquelle les satisfactions des agents seraient toute sup\'erieures ou \'egales \`a lambda comme un probl\`eme de flot maximum dans un graphe il suffit de cr\'e\'e un graphe avec des sommets pour chaque objet et pour chaque agent, une source connect\'e \`a tous les agents, un puit connect\'e \`a tous les objet, et des arcs qui connecte les agents vers les objets qui leur donne une satisfaction sup\'erieure ou \'egale \`a lambda. Chaque arcs a un flot maximum de 1.
+
+\cscript{partie2pygraph}{R\'esolution probl\`eme flot max}
+
+\subsection{L'approche programme lin\'eaire}
+
+Fonction d'optimisation : \\\\
+$\max y$\\\\
+Contraintes :\\
+
+$(\sum_{j=1}^{m}x_{ij}.u_{ij})-y > 0, \forall i \in [0,n]$
+$\prod_{i=1}^{n}\sum_{j=1}^{m}x_{ij} = 1$\\
+$\prod_{j=1}^{n}\sum_{i=1}^{m}x_{ij} = 1$\\
+$x_{ij}\in\{0,1\}, \forall i,j\in[0,n]$\\
+$u_{ij}\in[0,M]$
+
+\cscript{P1}{Programme lin\'eaire P1 avec pygurobi}
+
+\subsection{Essais num\'eriques}
+
+\begin{tabular}{|*{4}{c|}}
+    \hline
+     n  & P1  & Graphes\\
+    \hline
+     10  & 0.01  & 0.01\\
+    \hline
+     50  & 0.14  & 2\\
+    \hline
+     100  & 1.48  & 35\\
+    \hline
+\end{tabular}
+
+On constate que, d'apr\`es les r\'esultats, Les Calculs avec l'algorithme de flot max sont beaucoup plus lent.
+La faute a l'\'etape de construction de graphe qui devient laborieuse lorsque n est grand.
+
+Le programme lin\'eaire P0 permet d'avoir un meilleur maximum
+mais en contrepartie peut avoir un minimum tr\`es bas. 
+Tandis que le programme lin\'eaire P1 permet d'avoir une moyenne 
+sup\'erieur et un meilleur minimum mais en contrepartie r\'eduit le maximum.
+
+\subsection{Approche un peu moins \'egalitariste}
+
+Fonction d'optimisation : \\\\
+$\max (y+\epsilon\sum_{i=1}^{n}\sum_{j=1}^{m}x_{ij}.u_{ij})$\\\\
+Contraintes :\\
+
+$(\sum_{j=1}^{m}x_{ij}.u_{ij})-y > 0, \forall i \in [0,n]$
+$\prod_{i=1}^{n}\sum_{j=1}^{m}x_{ij} = 1$\\
+$\prod_{j=1}^{n}\sum_{i=1}^{m}x_{ij} = 1$\\
+$x_{ij}\in\{0,1\}, \forall i,j\in[0,n]$\\
+$u_{ij}\in[0,M]$
+
+\cscript{P2}{Programme lin\'eaire P2 avec pygurobi}
+
+
+%----------------------------------------------------------------------------------------
+%	Approche \'egalitariste en regrets
+%----------------------------------------------------------------------------------------
+
+\newpage
+\section{Approche \'egalitariste en regrets}
+
+\subsection{Regrets en programme lin\'eaire}
+
+Fonction d'optimisation : \\\\
+$\max y$\\\\
+Contraintes :\\
+
+$(\sum_{j=1}^{m}x_{ij}.u_{ij})-y > 0, \forall i \in [0,n]$
+
+$\prod_{i=1}^{n}\sum_{j=1}^{m}x_{ij} = 1$\\
+$\prod_{j=1}^{n}\sum_{i=1}^{m}x_{ij} = 1$\\
+$x_{ij}\in\{0,1\}, \forall i,j\in[0,n]$\\
+$u_{ij}\in[0,M]$
+
+\cscript{P3}{Programme lin\'eaire P3 avec pygurobi}
+
+\subsection{Mod\'elisation du probl\`eme sous forme de flot max}
+
+\cscript{partie3pygraph}{R\'esolution probl\`eme flot max avec regrets (algo hongrois)}
+
+\subsection{R\'esultats}
+
+\begin{tabular}{|*{4}{c|}}
+    \hline
+     n  & P1  & Graphes\\
+    \hline
+     10  & 0.01  & 0.01\\
+    \hline
+     50  & 0.36  & 1\\
+    \hline
+     100  & 1.76  & 6\\
+    \hline
+\end{tabular}
+
+M\^eme remarque que pour la r\'esolution par flot max \'egalitariste
+
+%----------------------------------------------------------------------------------------
+%	Extension \`a l'affectation multiple
+%----------------------------------------------------------------------------------------
+
+\newpage
+\section{Extension \`a l'affectation multiple}
+
+ P0 ne peut pas s'adapter au cas générale car ses seuls contraintes sont celle du cas spécifique.
+P1, P2 et P3 peuvent s'adapter au cas générale en retirent les contraintes sur le nombre d'objet qu'un agent peux avoir et en ajoutant chaque objet en plusieurs exemplaires comme de nouveaux objet.
+De même pour l'algorithme de graphe égalitariste et celui des regrets dans le quelle on met le flot max de la source vers les agent à m.
+
+\end{document}

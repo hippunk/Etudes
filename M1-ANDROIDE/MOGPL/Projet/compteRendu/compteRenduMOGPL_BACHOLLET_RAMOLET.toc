@@ -1,0 +1,14 @@
+\select@language {french}
+\contentsline {section}{\numberline {1}Premi\`ere mod\'elisation du probl\`eme}{3}
+\contentsline {subsection}{\numberline {1.1}Mod\'elisation du probl\`eme}{3}
+\contentsline {subsection}{\numberline {1.2}Essais num\'eriques}{4}
+\contentsline {section}{\numberline {2}Approche \'egalitariste}{6}
+\contentsline {subsection}{\numberline {2.1}L'approche flot max}{6}
+\contentsline {subsection}{\numberline {2.2}L'approche programme lin\'eaire}{7}
+\contentsline {subsection}{\numberline {2.3}Essais num\'eriques}{9}
+\contentsline {subsection}{\numberline {2.4}Approche un peu moins \'egalitariste}{10}
+\contentsline {section}{\numberline {3}Approche \'egalitariste en regrets}{12}
+\contentsline {subsection}{\numberline {3.1}Regrets en programme lin\'eaire}{12}
+\contentsline {subsection}{\numberline {3.2}Mod\'elisation du probl\`eme sous forme de flot max}{14}
+\contentsline {subsection}{\numberline {3.3}R\'esultats}{16}
+\contentsline {section}{\numberline {4}Extension \`a l'affectation multiple}{17}

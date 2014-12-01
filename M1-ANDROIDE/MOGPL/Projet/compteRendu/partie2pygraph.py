@@ -22,7 +22,7 @@ def genUtils(M,N):
     return u
 
 #N = np.random.random_integers(5,15)
-N = 3
+N = 100
 M = N
 u = genUtils(M,N)
 x = []

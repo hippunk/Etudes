@@ -89,14 +89,14 @@ Si ei = 1 alors U ← T · U mod N
 T ← T · T mod N
 Retourner U*/
 
-	mpz_t u,t;
+	/*mpz_t u,t;
 	mpz_set_str(u,"1",10);
 	mpz_set(t,m);
 
 
 
 	mpz_clear(u);
-	mpz_clear(t);
+	mpz_clear(t);*/
 }
 
 void mpzMy_inverse(mpz_t result, mpz_t a, mpz_t n)

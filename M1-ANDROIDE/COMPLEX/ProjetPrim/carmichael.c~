@@ -1,22 +1,123 @@
 #include<stdio.h>
 #include<stdlib.h>
 #include<math.h>
+#include<gmp.h>
 #include"carmichael.h"
+#include"arithZn.h"
 #include"naif.h"
+#include<time.h>
 
-int iIs_carmichael(int n){
-
-	//int result = 1; 
-
-	if((n%2) == 0) //test si n premier a faire
+/*int iIs_carmichael(int n){
+	//int result = 1;
+	if((n%2) == 0)
 		return 0;
-
 	int a = 0;
-	for(a = 2;a < n;a++){
-		if(((int)(pow(a,n-1)-1)%(n-1))==a)
+	
+	for(a = 1;a < n;a++){
+		if(((int)(pow(a,n-1)-1)%(n))=0)
 			return 0;
 	}
-	
 	return 1;
+}*/
+
+void mpzGen_carmichael(mpz_t n){
+
+	mpz_t tmp;
+	mpz_t integ2;
+	mpz_t tab[9592];
+	int i = 0;
+	int j = 0;
+	int k = 0;
+	int cpt = 0;
+	int sortie = 1;
+
+       	mpz_init (tmp);
+       	mpz_init (integ2);
+	for(i = 0;i<9592;i++)
+		mpz_init(tab[i]);
+
+	mpz_set_str(integ2,"2",10);
+
+
+	//Génération de la liste de premiers
+	printf("Génération de la liste de premiers : \n");
+
+	for(;mpz_cmp_si(integ2,500)<=0;mpz_add_ui(integ2,integ2,1)){ 		
+		if(first_test(integ2)){
+					
+			mpz_set(tab[cpt],integ2);
+			cpt++;
+		}
+	}
+
+	//Calcul carmichael
+	while(sortie){
+		i = rand()%cpt;
+		j = rand()%cpt;
+		k = rand()%cpt;				
+		
+		mpz_set(tmp,tab[i]);
+		mpz_mul(tmp,tmp,tab[j]);
+		mpz_mul(tmp,tmp,tab[k]);
+		if(mpzIs_carmichael(tmp)){
+			sortie = 0;		
+			mpz_set(n,tmp);
+		}
+
+	}
+
+
+       	mpz_clear (tmp);
+	mpz_clear (integ2);
+	for(i = 0;i<9592;i++)
+		mpz_clear(tab[i]);
 }
 
+int mpzIs_carmichael(mpz_t n){
+
+	if(first_test(n) == 1 || mpz_cmp_ui(n,1) <= 0){ //test si n premier
+		return 0;
+	}
+
+  	mpz_t tmp;
+  	mpz_t a;
+  	mpz_t tmp2;
+       	mpz_init (tmp);
+       	mpz_init (a);
+       	mpz_init (tmp2);
+
+	mpz_set(tmp,n);
+	mpz_sub_ui(tmp2,n,1);
+
+	mpz_set_str(a,"3",10);
+
+	for(;mpz_cmp(a,n)<0;mpz_add_ui(a,a,2)){
+
+		//pgcd n et a doit être 1
+		mpz_gcd(tmp,a,n);
+		
+
+		if(mpz_cmp_ui(tmp,1)==0){
+			
+			//nbd = 1;
+			//n = n-1
+			mpz_powm(tmp,a,tmp2,n);//a^(n-1)
+			//gmp_printf("a^n : %Zd\n",tmp);
+
+		
+			
+
+			if(mpz_cmp_ui(tmp,1)!=0){
+				return 0;
+			}
+		}
+	}
+	//if(!nbd)
+	//	return 0;
+	
+	mpz_clear(tmp);
+	mpz_clear(a);
+	mpz_clear(tmp2);
+
+	return 1;
+}

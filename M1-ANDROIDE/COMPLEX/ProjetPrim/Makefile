@@ -5,8 +5,8 @@ CFLAGS = -O3 -lgmp -lm -Wall
 # désactivation des règles implicites
 .SUFFIXES:
 
-all: main.o test.o carmichael.o arithZn.o naif.o
-	$(CC) $(CFLAGS) main.o test.o carmichael.o arithZn.o naif.o -o projetPrim
+all: main.o test.o carmichael.o arithZn.o naif.o fermat.o
+	$(CC) $(CFLAGS) main.o test.o carmichael.o arithZn.o naif.o fermat.o -o projetPrim
  
 main.o: main.c arithZn.h
 	$(CC) $(CFLAGS) -c main.c -o main.o 
@@ -22,6 +22,9 @@ arithZn.o: arithZn.c
 
 naif.o: naif.c 
 	$(CC) $(CFLAGS) -c naif.c -o naif.o
+
+fermat.o: fermat.c 
+	$(CC) $(CFLAGS) -c fermat.c -o fermat.o
 
 
 # suppression des fichiers temporaires

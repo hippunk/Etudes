@@ -48,7 +48,7 @@ void test_carmichael(){
 	int prem;
 	int cpt = 0;
 
-	for(prem = 0;mpz_cmp_si(integ2,100000)<=0;mpz_add_ui(integ2,integ2,2)){
+	for(prem = 0;mpz_cmp_si(integ2,10000000000)<=0;mpz_add_ui(integ2,integ2,2)){
 		prem = mpzIs_carmichael(integ2);
 		//gmp_printf ("\nDebug compteur : %Zd\n", integ2);
 		if(prem){
@@ -60,26 +60,28 @@ void test_carmichael(){
 	mpz_clear(integ2);
 }
 
-void test_pow(){
-
-  	mpz_t integ1;
-   	mpz_t integ2;
-   	mpz_t res;
-   	
-       	mpz_init (integ1);
+void test_5min_carmichael(){
+  	mpz_t integ2;
        	mpz_init (integ2);
-       	mpz_init (res);
-       	
-	mpz_set_str(integ1,"5",10);
-	mpz_set_str(integ2,"4",10);
+	mpz_set_str(integ2,"3",10);
 
-	
-	mpz_pow(res,integ1,integ2);
-	gmp_printf ("pow : %Zd\n", res);
+	int prem;
+	int cpt = 0;
+	chrono();
+	double chr = 0.0;
 
-	mpz_clear(integ1);
+	for(prem = 0;chr < 300.0;mpz_add_ui(integ2,integ2,2)){
+		prem = mpzIs_carmichael(integ2);
+		//gmp_printf ("\nDebug compteur : %Zd\n", integ2);
+		if(prem){
+			gmp_printf ("Est carmichael : %Zd\n", integ2);
+			cpt++;
+		}
+
+		chr += chrono();
+	}
+	printf ("Nombre de premiers trouvé : %i\n", cpt);
 	mpz_clear(integ2);
-	mpz_clear(res);
 }
 
 void test_1min_premiers(){

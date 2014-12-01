@@ -5,12 +5,12 @@
 la fonction retournent le temps entre deux appels*/
 double chrono();
 
-
 /*Affiche la liste des nombres premiers < 100000 ainsi que le nombre trouvé*/
 void test_premiers();
 
-
 /*Affiche le dernier nombre premier calculé en 1 minute*/
 void test_1min_premiers();
+
+void test_carmichael();
 
 #endif

@@ -6,7 +6,7 @@
 
 void mpzExpo_mod(mpz_t result, mpz_t m, mpz_t e, mpz_t n){
 
-	int i = 0;
+	/*int i = 0;
 	size_t fin = 0;
 
   	mpz_t t;
@@ -27,7 +27,7 @@ void mpzExpo_mod(mpz_t result, mpz_t m, mpz_t e, mpz_t n){
 
 
 	mpz_clear(t);
-	mpz_clear(tmp);
+	mpz_clear(tmp);*/
 }
 
 
