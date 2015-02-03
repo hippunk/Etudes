@@ -1,7 +1,13 @@
 #ifndef MAINWINDOW_H
 #define MAINWINDOW_H
 
+#include <iostream>
+
 #include <QMainWindow>
+#include <QTextEdit>
+ #include <QFileDialog>
+
+using namespace std;
 
 namespace Ui {
 class MainWindow;
@@ -17,6 +23,14 @@ public:
     
 private:
     Ui::MainWindow *ui;
+
+public slots:
+    void openFile();
+    void saveFile();
+    void quitApp();
+
+
+
 };
 
 #endif // MAINWINDOW_H
