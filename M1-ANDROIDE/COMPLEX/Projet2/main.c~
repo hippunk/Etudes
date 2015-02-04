@@ -51,6 +51,10 @@ int main(int argc, char** argv){
   else
   printf("%d n'est pas un nombre de Carmichael.\n",c);*/
 
+  srand(time(NULL));
+  int r=GenPKRSA(100);
+
+  printf("blabla %d\n",r);
 
 
   return 0;

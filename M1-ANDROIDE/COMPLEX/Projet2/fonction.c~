@@ -95,7 +95,7 @@ int expo_mod(m,e,n){
 int first_test(n){
   int i;
   int res=1;
-  if(n%2==0 || n%5==0)
+  if(n%2==0)
     return -1;
   double k=sqrt(n);
   int o=(int)k;
@@ -116,7 +116,7 @@ int is_Carmichael(n){
     if(first_test(i)==1){
       if(((n%i)==0) && (test%(i-1)==0)){
 	cpt=cpt/i;
-	/*printf("%d\n",i);*/
+	printf("%d\n",test);
       }
     }
     if(cpt==1)
@@ -232,11 +232,97 @@ double experimental_Fermat(nbtirage){
   return res;
 }
   
-/*
-int TestRabinMiller(n){
-}
-*/   
 
+int TestRabinMiller(n){
+  if(n%2==0){
+    // printf("il faut un nombre impaire\n");
+    return 0;
+  }
+  int k=n-1;
+  int cpt=1;
+  int s=1;
+  int r=1;
+  int a=rand()%(k-2)+2;
+  while(cpt==1){
+    r=1;
+    while((pow(2,s)*r)<k){
+      r=r+2;
+    }
+    if((pow(2,s)*r)==k)
+      cpt=-1;
+    else
+      s+=1;
+  }
+  //printf("s: %d     r: %d\n",s,r);
+  int reste=expo_mod(a,r,n);
+  if(reste==1 || reste==-1){
+    printf("premier\n");
+    return 1;
+  }
+  else {
+    int j=1;
+    while(j<=s-1 && (reste!=1 || reste!=-1)){
+      reste=expo_mod(reste,2,n);
+      if(reste==1){
+	printf("composé\n");
+	return -1;
+      }
+      j++;
+    }
+  }
+  if(reste!=-1){
+    printf("composé\n");
+    return -1;
+  }
+  printf("premier");
+  return 1;
+}
+
+
+double experimental_RabinMiller(nbtirage){
+  int k=100000;
+  int i;
+  int nb_erreur=0;
+  int nb_fois=0;
+  int tmp;
+  for(i=1;i<nbtirage;i+=2){
+    tmp=rand()%(k-3)+3;
+    if(TestRabinMiller(tmp)==1){
+      nb_fois++;
+      if(first_test(tmp)!=1)
+	nb_erreur++;
+    }
+  }
+  printf("%d\n",nb_erreur);
+  printf("%d\n",nb_fois);
+  double f=nb_erreur*100.0;
+  double p=nb_fois;
+  double res=f/p;
+  return res;
+}
+
+int GenPKRSA(int t){
+  int p,q,n;
+  int cpt=1;
+  int h=pow(2,t);
+  while(cpt==1){
+    int tmp=rand()%(h-3)+3;
+    if(TestRabinMiller(tmp)==1 && test_Fermat(tmp)==1){
+      cpt=2;
+      p=tmp;
+    }
+  }
+  while(cpt==2){
+    int tmp=rand()%(h-3)+3;
+     if(TestRabinMiller(tmp)==1 && test_Fermat(tmp)==1){
+       cpt=3;
+       q=tmp;
+     }
+  }
+  printf("p: %d    q: %d\n",p,q);
+  n=p*q;
+  return n;
+}
 
 
     

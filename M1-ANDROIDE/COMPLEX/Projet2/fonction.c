@@ -95,7 +95,7 @@ int expo_mod(m,e,n){
 int first_test(n){
   int i;
   int res=1;
-  if(n%2==0 || n%5==0)
+  if(n%2==0)
     return -1;
   double k=sqrt(n);
   int o=(int)k;
@@ -116,7 +116,7 @@ int is_Carmichael(n){
     if(first_test(i)==1){
       if(((n%i)==0) && (test%(i-1)==0)){
 	cpt=cpt/i;
-	printf("%d\n",test);
+	//printf("%d\n",test);
       }
     }
     if(cpt==1)
