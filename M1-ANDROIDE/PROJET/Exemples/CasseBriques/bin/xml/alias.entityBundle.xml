@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<resource>
+	<a name="Transform" class="com.ktm.genome.render.component.Transform" />
+	<a name="TextureResource" class="com.ktm.genome.resource.component.TextureResource" />
+	<a name="Layer" class="com.ktm.genome.render.component.Layer" />
+	<a name="Layered" class="com.ktm.genome.render.component.Layered"/>
+	
+	<a name="Ball" class="components.Ball"/>
+	<a name="Movable" class="components.Movable"/>
+	<a name="Controlable" class="components.Controlable"/>
+	<a name="Duration" class="components.Duration"/>
+	<a name="Dimension" class="components.Dimension"/>
+	<a name="Collision" class="components.Collision"/>
+	
+</resource>

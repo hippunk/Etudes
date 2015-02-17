@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<resource>
+	<a name="Transform" class="com.ktm.genome.render.component.Transform" />
+	<a name="TextureResource" class="com.ktm.genome.resource.component.TextureResource" />
+	<a name="Layer" class="com.ktm.genome.render.component.Layer" />
+	<a name="Layered" class="com.ktm.genome.render.component.Layered"/>
+	
+	<a name="GrilleComponent" class="components.GrilleComponent"/>
+	<a name="Personnage" class="components.Personnage"/>
+	<a name="Obstacle" class="components.Obstacle"/>
+</resource>

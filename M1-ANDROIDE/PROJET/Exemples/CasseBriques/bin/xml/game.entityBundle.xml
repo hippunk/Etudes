@@ -1,0 +1,474 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<resource>
+	
+	<!--  Backgound Layer, image backgroud	-->
+	<e>
+		<Transform/>
+		<Layer id="gameLayer" index="0"/>
+	</e>
+	<e>
+		<Transform x="0" y="0"/>
+		<TextureResource source="pictures/background.jpg" id="bg"/>
+		<Layered layerId="gameLayer"/>	
+	</e>
+	<!-- Ball Layer, contient les balles -->
+	<e>
+		<Layer id="ballLayer" index="2" />
+	</e>
+	<e>
+		<Transform x="50" y="0" scaleX="0.1" scaleY="0.1" />
+		<TextureResource source="pictures/ball.png" id="ball"/>
+		<Layered layerId="ballLayer" />
+		<Ball />
+		<Movable velocity="5" />
+		<Dimension />
+	</e>
+	<e>
+		<Transform x="50" y="0" scaleX="0.1" scaleY="0.1" />
+		<TextureResource source="pictures/ball.png" id="ball"/>
+		<Layered layerId="ballLayer" />
+		<Ball />
+		<Movable velocity="5" />
+		<Dimension />
+	</e>
+	<e>
+		<Transform x="50" y="0" scaleX="0.1" scaleY="0.1" />
+		<TextureResource source="pictures/ball.png" id="ball"/>
+		<Layered layerId="ballLayer" />
+		<Ball />
+		<Movable velocity="5" />
+		<Dimension />
+	</e>
+	<e>
+		<Transform x="50" y="0" scaleX="0.1" scaleY="0.1" />
+		<TextureResource source="pictures/ball.png" id="ball"/>
+		<Layered layerId="ballLayer" />
+		<Ball />
+		<Movable velocity="5" />
+		<Dimension />
+	</e>
+	<e>
+		<Transform x="50" y="0" scaleX="0.1" scaleY="0.1" />
+		<TextureResource source="pictures/ball.png" id="ball"/>
+		<Layered layerId="ballLayer" />
+		<Ball />
+		<Movable velocity="5" />
+		<Dimension />
+	</e>
+	<e>
+		<Transform x="50" y="0" scaleX="0.1" scaleY="0.1" />
+		<TextureResource source="pictures/ball.png" id="ball"/>
+		<Layered layerId="ballLayer" />
+		<Ball />
+		<Movable velocity="5" />
+		<Dimension />
+	</e>
+	<e>
+		<Transform x="50" y="0" scaleX="0.1" scaleY="0.1" />
+		<TextureResource source="pictures/ball.png" id="ball"/>
+		<Layered layerId="ballLayer" />
+		<Ball />
+		<Movable velocity="5" />
+		<Dimension />
+	</e>
+	<e>
+		<Transform x="50" y="0" scaleX="0.1" scaleY="0.1" />
+		<TextureResource source="pictures/ball.png" id="ball"/>
+		<Layered layerId="ballLayer" />
+		<Ball />
+		<Movable velocity="5" />
+		<Dimension />
+	</e>
+	<e>
+		<Transform x="50" y="0" scaleX="0.1" scaleY="0.1" />
+		<TextureResource source="pictures/ball.png" id="ball"/>
+		<Layered layerId="ballLayer" />
+		<Ball />
+		<Movable velocity="5" />
+		<Dimension />
+	</e>
+	<e>
+		<Transform x="50" y="0" scaleX="0.1" scaleY="0.1" />
+		<TextureResource source="pictures/ball.png" id="ball"/>
+		<Layered layerId="ballLayer" />
+		<Ball />
+		<Movable velocity="5" />
+		<Dimension />
+	</e>
+	<e>
+		<Transform x="50" y="0" scaleX="0.1" scaleY="0.1" />
+		<TextureResource source="pictures/ball.png" id="ball"/>
+		<Layered layerId="ballLayer" />
+		<Ball />
+		<Movable velocity="5" />
+		<Dimension />
+	</e>
+	<e>
+		<Transform x="50" y="0" scaleX="0.1" scaleY="0.1" />
+		<TextureResource source="pictures/ball.png" id="ball"/>
+		<Layered layerId="ballLayer" />
+		<Ball />
+		<Movable velocity="5" />
+		<Dimension />
+	</e>
+	<e>
+		<Transform x="50" y="0" scaleX="0.1" scaleY="0.1" />
+		<TextureResource source="pictures/ball.png" id="ball"/>
+		<Layered layerId="ballLayer" />
+		<Ball />
+		<Movable velocity="5" />
+		<Dimension />
+	</e>
+	<e>
+		<Transform x="50" y="0" scaleX="0.1" scaleY="0.1" />
+		<TextureResource source="pictures/ball.png" id="ball"/>
+		<Layered layerId="ballLayer" />
+		<Ball />
+		<Movable velocity="5" />
+		<Dimension />
+	</e>
+	<e>
+		<Transform x="50" y="0" scaleX="0.1" scaleY="0.1" />
+		<TextureResource source="pictures/ball.png" id="ball"/>
+		<Layered layerId="ballLayer" />
+		<Ball />
+		<Movable velocity="5" />
+		<Dimension />
+	</e>
+	<e>
+		<Transform x="50" y="0" scaleX="0.1" scaleY="0.1" />
+		<TextureResource source="pictures/ball.png" id="ball"/>
+		<Layered layerId="ballLayer" />
+		<Ball />
+		<Movable velocity="5" />
+		<Dimension />
+	</e>
+	<e>
+		<Transform x="50" y="0" scaleX="0.1" scaleY="0.1" />
+		<TextureResource source="pictures/ball.png" id="ball"/>
+		<Layered layerId="ballLayer" />
+		<Ball />
+		<Movable velocity="5" />
+		<Dimension />
+	</e>
+	<e>
+		<Transform x="50" y="0" scaleX="0.1" scaleY="0.1" />
+		<TextureResource source="pictures/ball.png" id="ball"/>
+		<Layered layerId="ballLayer" />
+		<Ball />
+		<Movable velocity="5" />
+		<Dimension />
+	</e>
+	<e>
+		<Transform x="50" y="0" scaleX="0.1" scaleY="0.1" />
+		<TextureResource source="pictures/ball.png" id="ball"/>
+		<Layered layerId="ballLayer" />
+		<Ball />
+		<Movable velocity="5" />
+		<Dimension />
+	</e>
+	<e>
+		<Transform x="50" y="0" scaleX="0.1" scaleY="0.1" />
+		<TextureResource source="pictures/ball.png" id="ball"/>
+		<Layered layerId="ballLayer" />
+		<Ball />
+		<Movable velocity="5" />
+		<Dimension />
+	</e>
+	<e>
+		<Transform x="50" y="0" scaleX="0.1" scaleY="0.1" />
+		<TextureResource source="pictures/ball.png" id="ball"/>
+		<Layered layerId="ballLayer" />
+		<Ball />
+		<Movable velocity="5" />
+		<Dimension />
+	</e>
+	<e>
+		<Transform x="50" y="0" scaleX="0.1" scaleY="0.1" />
+		<TextureResource source="pictures/ball.png" id="ball"/>
+		<Layered layerId="ballLayer" />
+		<Ball />
+		<Movable velocity="5" />
+		<Dimension />
+	</e>
+	<e>
+		<Transform x="50" y="0" scaleX="0.1" scaleY="0.1" />
+		<TextureResource source="pictures/ball.png" id="ball"/>
+		<Layered layerId="ballLayer" />
+		<Ball />
+		<Movable velocity="5" />
+		<Dimension />
+	</e>
+	<e>
+		<Transform x="50" y="0" scaleX="0.1" scaleY="0.1" />
+		<TextureResource source="pictures/ball.png" id="ball"/>
+		<Layered layerId="ballLayer" />
+		<Ball />
+		<Movable velocity="5" />
+		<Dimension />
+	</e>
+	<e>
+		<Transform x="50" y="0" scaleX="0.1" scaleY="0.1" />
+		<TextureResource source="pictures/ball.png" id="ball"/>
+		<Layered layerId="ballLayer" />
+		<Ball />
+		<Movable velocity="5" />
+		<Dimension />
+	</e>
+	<e>
+		<Transform x="50" y="0" scaleX="0.1" scaleY="0.1" />
+		<TextureResource source="pictures/ball.png" id="ball"/>
+		<Layered layerId="ballLayer" />
+		<Ball />
+		<Movable velocity="5" />
+		<Dimension />
+	</e>
+	<e>
+		<Transform x="50" y="0" scaleX="0.1" scaleY="0.1" />
+		<TextureResource source="pictures/ball.png" id="ball"/>
+		<Layered layerId="ballLayer" />
+		<Ball />
+		<Movable velocity="5" />
+		<Dimension />
+	</e>
+	<e>
+		<Transform x="50" y="0" scaleX="0.1" scaleY="0.1" />
+		<TextureResource source="pictures/ball.png" id="ball"/>
+		<Layered layerId="ballLayer" />
+		<Ball />
+		<Movable velocity="5" />
+		<Dimension />
+	</e>
+	<e>
+		<Transform x="50" y="0" scaleX="0.1" scaleY="0.1" />
+		<TextureResource source="pictures/ball.png" id="ball"/>
+		<Layered layerId="ballLayer" />
+		<Ball />
+		<Movable velocity="5" />
+		<Dimension />
+	</e>
+	<e>
+		<Transform x="50" y="0" scaleX="0.1" scaleY="0.1" />
+		<TextureResource source="pictures/ball.png" id="ball"/>
+		<Layered layerId="ballLayer" />
+		<Ball />
+		<Movable velocity="5" />
+		<Dimension />
+	</e>
+	<e>
+		<Transform x="50" y="0" scaleX="0.1" scaleY="0.1" />
+		<TextureResource source="pictures/ball.png" id="ball"/>
+		<Layered layerId="ballLayer" />
+		<Ball />
+		<Movable velocity="5" />
+		<Dimension />
+	</e>
+	<e>
+		<Transform x="50" y="0" scaleX="0.1" scaleY="0.1" />
+		<TextureResource source="pictures/ball.png" id="ball"/>
+		<Layered layerId="ballLayer" />
+		<Ball />
+		<Movable velocity="5" />
+		<Dimension />
+	</e>
+	<e>
+		<Transform x="50" y="0" scaleX="0.1" scaleY="0.1" />
+		<TextureResource source="pictures/ball.png" id="ball"/>
+		<Layered layerId="ballLayer" />
+		<Ball />
+		<Movable velocity="5" />
+		<Dimension />
+	</e>
+	<e>
+		<Transform x="50" y="0" scaleX="0.1" scaleY="0.1" />
+		<TextureResource source="pictures/ball.png" id="ball"/>
+		<Layered layerId="ballLayer" />
+		<Ball />
+		<Movable velocity="5" />
+		<Dimension />
+	</e>
+	<e>
+		<Transform x="50" y="0" scaleX="0.1" scaleY="0.1" />
+		<TextureResource source="pictures/ball.png" id="ball"/>
+		<Layered layerId="ballLayer" />
+		<Ball />
+		<Movable velocity="5" />
+		<Dimension />
+	</e>
+	<e>
+		<Transform x="50" y="0" scaleX="0.1" scaleY="0.1" />
+		<TextureResource source="pictures/ball.png" id="ball"/>
+		<Layered layerId="ballLayer" />
+		<Ball />
+		<Movable velocity="5" />
+		<Dimension />
+	</e>
+	<e>
+		<Transform x="50" y="0" scaleX="0.1" scaleY="0.1" />
+		<TextureResource source="pictures/ball.png" id="ball"/>
+		<Layered layerId="ballLayer" />
+		<Ball />
+		<Movable velocity="5" />
+		<Dimension />
+	</e>
+	<e>
+		<Transform x="50" y="0" scaleX="0.1" scaleY="0.1" />
+		<TextureResource source="pictures/ball.png" id="ball"/>
+		<Layered layerId="ballLayer" />
+		<Ball />
+		<Movable velocity="5" />
+		<Dimension />
+	</e>
+	<e>
+		<Transform x="50" y="0" scaleX="0.1" scaleY="0.1" />
+		<TextureResource source="pictures/ball.png" id="ball"/>
+		<Layered layerId="ballLayer" />
+		<Ball />
+		<Movable velocity="5" />
+		<Dimension />
+	</e>
+	<e>
+		<Transform x="50" y="0" scaleX="0.1" scaleY="0.1" />
+		<TextureResource source="pictures/ball.png" id="ball"/>
+		<Layered layerId="ballLayer" />
+		<Ball />
+		<Movable velocity="5" />
+		<Dimension />
+	</e>
+	<e>
+		<Transform x="50" y="0" scaleX="0.1" scaleY="0.1" />
+		<TextureResource source="pictures/ball.png" id="ball"/>
+		<Layered layerId="ballLayer" />
+		<Ball />
+		<Movable velocity="5" />
+		<Dimension />
+	</e>
+	<e>
+		<Transform x="50" y="0" scaleX="0.1" scaleY="0.1" />
+		<TextureResource source="pictures/ball.png" id="ball"/>
+		<Layered layerId="ballLayer" />
+		<Ball />
+		<Movable velocity="5" />
+		<Dimension />
+	</e>
+	<e>
+		<Transform x="50" y="0" scaleX="0.1" scaleY="0.1" />
+		<TextureResource source="pictures/ball.png" id="ball"/>
+		<Layered layerId="ballLayer" />
+		<Ball />
+		<Movable velocity="5" />
+		<Dimension />
+	</e>
+	<e>
+		<Transform x="50" y="0" scaleX="0.1" scaleY="0.1" />
+		<TextureResource source="pictures/ball.png" id="ball"/>
+		<Layered layerId="ballLayer" />
+		<Ball />
+		<Movable velocity="5" />
+		<Dimension />
+	</e>
+	<e>
+		<Transform x="50" y="0" scaleX="0.1" scaleY="0.1" />
+		<TextureResource source="pictures/ball.png" id="ball"/>
+		<Layered layerId="ballLayer" />
+		<Ball />
+		<Movable velocity="5" />
+		<Dimension />
+	</e>
+	<e>
+		<Transform x="50" y="0" scaleX="0.1" scaleY="0.1" />
+		<TextureResource source="pictures/ball.png" id="ball"/>
+		<Layered layerId="ballLayer" />
+		<Ball />
+		<Movable velocity="5" />
+		<Dimension />
+	</e>
+	<e>
+		<Transform x="50" y="0" scaleX="0.1" scaleY="0.1" />
+		<TextureResource source="pictures/ball.png" id="ball"/>
+		<Layered layerId="ballLayer" />
+		<Ball />
+		<Movable velocity="5" />
+		<Dimension />
+	</e>
+	<e>
+		<Transform x="50" y="0" scaleX="0.1" scaleY="0.1" />
+		<TextureResource source="pictures/ball.png" id="ball"/>
+		<Layered layerId="ballLayer" />
+		<Ball />
+		<Movable velocity="5" />
+		<Dimension />
+	</e>
+	<e>
+		<Transform x="50" y="0" scaleX="0.1" scaleY="0.1" />
+		<TextureResource source="pictures/ball.png" id="ball"/>
+		<Layered layerId="ballLayer" />
+		<Ball />
+		<Movable velocity="5" />
+		<Dimension />
+	</e>
+	<e>
+		<Transform x="50" y="0" scaleX="0.1" scaleY="0.1" />
+		<TextureResource source="pictures/ball.png" id="ball"/>
+		<Layered layerId="ballLayer" />
+		<Ball />
+		<Movable velocity="5" />
+		<Dimension />
+	</e>
+	<e>
+		<Transform x="50" y="0" scaleX="0.1" scaleY="0.1" />
+		<TextureResource source="pictures/ball.png" id="ball"/>
+		<Layered layerId="ballLayer" />
+		<Ball />
+		<Movable velocity="5" />
+		<Dimension />
+	</e>
+	<e>
+		<Transform x="50" y="0" scaleX="0.1" scaleY="0.1" />
+		<TextureResource source="pictures/ball.png" id="ball"/>
+		<Layered layerId="ballLayer" />
+		<Ball />
+		<Movable velocity="5" />
+		<Dimension />
+	</e>
+	
+	<!-- Bricks Layer, contient les briques et la raquette-->
+	
+	<e>
+		<Layer id="brickLayer" index="1"/>
+	</e>
+	<e>
+		<Transform x="100" y="100"/>
+		<TextureResource source="pictures/brique.png" id="brick"/>
+		<Layered layerId="brickLayer"/>
+		<Duration/>
+		<Dimension />
+		<Collision />
+	</e>
+	<e>
+		<Transform x="350" y="100"/>
+		<TextureResource source="pictures/brique.png" id="brick"/>
+		<Layered layerId="brickLayer"/>
+		<Duration duration="2" />
+		<Dimension />
+		<Collision />
+	</e>
+	<e>
+		<Transform x="600" y="100"/>
+		<TextureResource source="pictures/brique.png" id="brick"/>
+		<Layered layerId="brickLayer"/>
+		<Duration duration="12" />
+		<Dimension />
+		<Collision />
+	</e>
+	<e>
+		<Transform scaleX="0.2" scaleY="0.2" />
+		<TextureResource source="pictures/brique.png" id="brick"/>
+		<Layered layerId="brickLayer"/>
+		<Movable velocity="8" />
+		<Controlable />
+		<Dimension />
+		<Collision />
+	</e>
+		
+</resource>
