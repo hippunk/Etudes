@@ -6,22 +6,22 @@ MainWindow::MainWindow(QWidget *parent) :
     ui(new Ui::MainWindow)
 {
 
-    QMenuBar* myMenuBar = menuBar();
-    QMenu* fileMenu = myMenuBar->addMenu("&Fichier");
-    QToolBar* fileToolBar = addToolBar(tr("Fichier"));
+    myMenuBar = menuBar();
+    fileMenu = myMenuBar->addMenu("&Fichier");
+    fileToolBar = addToolBar(tr("Fichier"));
 
-    QAction* actOpen = new QAction(style()->standardIcon(QStyle::SP_DialogOpenButton),("&Open..."), this);
+    actOpen = new QAction(style()->standardIcon(QStyle::SP_DialogOpenButton),("&Open..."), this);
     actOpen->setShortcut(QKeySequence(tr("Ctrl+O")));
     actOpen->setToolTip("Open");
     actOpen->setStatusTip("Tip : Open");
 
-    QAction* actSave = new QAction(style()->standardIcon(QStyle::SP_DialogSaveButton),("&Save..."), this);
+    actSave = new QAction(style()->standardIcon(QStyle::SP_DialogSaveButton),("&Save..."), this);
     actSave->setShortcut(QKeySequence(tr("Ctrl+S")));
     actSave->setToolTip("Save");
     actSave->setStatusTip("Tip : Save");
 
 
-    QAction* actQuit = new QAction(style()->standardIcon(QStyle::SP_DialogCloseButton),("Qui&t..."), this);
+    actQuit = new QAction(style()->standardIcon(QStyle::SP_DialogCloseButton),("Qui&t..."), this);
     actQuit->setShortcut(QKeySequence(tr("Ctrl+Q")));
     actQuit->setToolTip("Quit");
     actQuit->setStatusTip("Tip : Quit");
@@ -34,8 +34,11 @@ MainWindow::MainWindow(QWidget *parent) :
     fileToolBar->addAction(actSave);
     fileToolBar->addAction(actQuit);
 
-    setCentralWidget(new QTextEdit());
-    setStatusBar(new QStatusBar());
+    zoneDessin = new ZoneDessin();
+    qStatusBar = new QStatusBar();
+
+    setCentralWidget(zoneDessin);
+    setStatusBar(qStatusBar);
 
     //ui->setupUi(this);
 
@@ -67,6 +70,7 @@ void MainWindow::saveFile(){
 
     cout << qPrintable(fileName);
 }
+
 MainWindow::~MainWindow()
 {
     delete ui;

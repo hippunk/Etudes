@@ -5,7 +5,9 @@
 
 #include <QMainWindow>
 #include <QTextEdit>
- #include <QFileDialog>
+#include <QFileDialog>
+
+#include "zonedessin.h"
 
 using namespace std;
 
@@ -23,6 +25,16 @@ public:
 
 private:
     Ui::MainWindow *ui;
+    QMenuBar* myMenuBar;
+    QMenu* fileMenu;
+    QToolBar* fileToolBar;
+    QAction* actOpen;
+    QAction* actSave;
+    QAction* actQuit;
+    ZoneDessin *zoneDessin;
+    QStatusBar *qStatusBar;
+
+signals:
 
 public slots:
     void openFile();
