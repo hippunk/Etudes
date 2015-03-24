@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">TME4</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="menu_settings">Settings</string>
+    <string name="euros_label">euros</string>
+    <string name="taux_label">taux</string>
+    <string name="result_label">result</string>
+    <string name="bouton">bouton</string>
+    <string-array name="list_taux">
+        <item >Dollars</item>
+        <item >Yens</item>
+        <item >Wuan</item>
+        <item >Autre</item>
+    </string-array>
+
+</resources>
