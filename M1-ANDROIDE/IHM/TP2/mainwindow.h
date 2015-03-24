@@ -6,6 +6,8 @@
 #include <QMainWindow>
 #include <QTextEdit>
 #include <QFileDialog>
+#include <QColorDialog>.
+#include <QComboBox>
 
 #include "zonedessin.h"
 
@@ -31,14 +33,19 @@ private:
     QAction* actOpen;
     QAction* actSave;
     QAction* actQuit;
+    QAction* actSelectColor;
+    QAction* actDelete;
     ZoneDessin *zoneDessin;
     QStatusBar *qStatusBar;
+    QColor color;
+    QComboBox *comboBox;
 
 signals:
 
 public slots:
     void openFile();
     void saveFile();
+    void setColor();
 
 };
 

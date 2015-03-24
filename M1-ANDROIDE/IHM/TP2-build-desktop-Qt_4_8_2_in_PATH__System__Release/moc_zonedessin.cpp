@@ -1,7 +1,7 @@
 /****************************************************************************
 ** Meta object code from reading C++ file 'zonedessin.h'
 **
-** Created: Tue Feb 17 12:34:37 2015
+** Created: Tue Mar 3 12:41:10 2015
 **      by: The Qt Meta Object Compiler version 63 (Qt 4.8.2)
 **
 ** WARNING! All changes made in this file will be lost!
@@ -23,26 +23,41 @@ static const uint qt_meta_data_ZoneDessin[] = {
        6,       // revision
        0,       // classname
        0,    0, // classinfo
-       0,    0, // methods
+       4,   14, // methods
        0,    0, // properties
        0,    0, // enums/sets
        0,    0, // constructors
        0,       // flags
        0,       // signalCount
 
+ // slots: signature, parameters, type, tag, flags
+      18,   12,   11,   11, 0x0a,
+      51,   38,   11,   11, 0x0a,
+      79,   70,   11,   11, 0x0a,
+      94,   11,   11,   11, 0x0a,
+
        0        // eod
 };
 
 static const char qt_meta_stringdata_ZoneDessin[] = {
-    "ZoneDessin\0"
+    "ZoneDessin\0\0color\0slotCouleur(QColor)\0"
+    "newEpaisseur\0slotEpaisseur(int)\0"
+    "newStyle\0slotStyle(int)\0slotDelete()\0"
 };
 
 void ZoneDessin::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, void **_a)
 {
-    Q_UNUSED(_o);
-    Q_UNUSED(_id);
-    Q_UNUSED(_c);
-    Q_UNUSED(_a);
+    if (_c == QMetaObject::InvokeMetaMethod) {
+        Q_ASSERT(staticMetaObject.cast(_o));
+        ZoneDessin *_t = static_cast<ZoneDessin *>(_o);
+        switch (_id) {
+        case 0: _t->slotCouleur((*reinterpret_cast< QColor(*)>(_a[1]))); break;
+        case 1: _t->slotEpaisseur((*reinterpret_cast< int(*)>(_a[1]))); break;
+        case 2: _t->slotStyle((*reinterpret_cast< int(*)>(_a[1]))); break;
+        case 3: _t->slotDelete(); break;
+        default: ;
+        }
+    }
 }
 
 const QMetaObjectExtraData ZoneDessin::staticMetaObjectExtraData = {
@@ -76,6 +91,11 @@ int ZoneDessin::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
     _id = QWidget::qt_metacall(_c, _id, _a);
     if (_id < 0)
         return _id;
+    if (_c == QMetaObject::InvokeMetaMethod) {
+        if (_id < 4)
+            qt_static_metacall(this, _c, _id, _a);
+        _id -= 4;
+    }
     return _id;
 }
 QT_END_MOC_NAMESPACE

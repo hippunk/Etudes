@@ -5,6 +5,9 @@
 #include <QPainter>
 #include <QMouseEvent>
 #include <QLine>
+#include <QColorDialog>
+#include <iostream>
+#include <vector>
 
 class ZoneDessin : public QWidget
 {
@@ -23,13 +26,15 @@ class ZoneDessin : public QWidget
         QPoint debut;
         QPoint fin;
         QLine ligne;
-
+        QColor color;
+        std::vector<std::pair<QLine,QColor> > lignes;
     signals:
 
     public slots:
-        /*void couleur();
-        void epaisseur();
-        void style();*/
+        void slotCouleur(QColor color);
+        void slotEpaisseur(int newEpaisseur);
+        void slotStyle(int newStyle);
+        void slotDelete();
 
     
 };
