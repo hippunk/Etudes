@@ -50,11 +50,8 @@ public class ReceptionMessage extends TickerBehaviour{
 					// TODO Auto-generated catch block
 					e.printStackTrace();
 				}
-				//System.out.println("<----Message received from "+msg.getSender()+" ,content= "+message);
+				System.out.println("<----Message received from "+msg.getSender()+" ,content= "+message);
 				switch(message.type){
-					case Explored:
-						myagent.addExploredNode(message.contenu.get(0));
-						break;
 					case Safe:
 						break;
 					case Smell:
@@ -66,7 +63,8 @@ public class ReceptionMessage extends TickerBehaviour{
 					case Unexplored:
 						String pos = message.contenu.get(0);
 						message.contenu.remove(pos);
-						myagent.addUnexploredNodes(pos, message.contenu);
+						myagent.addExploredNode(pos);
+						myagent.addUnexpNodes(pos, message.contenu);
 						break;
 					default:
 						break;

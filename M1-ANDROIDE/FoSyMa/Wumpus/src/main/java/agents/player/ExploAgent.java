@@ -33,7 +33,8 @@ public class ExploAgent extends abstractAgent{
 	private static final long serialVersionUID = -5759287597054385630L;
 	public Graph graph = new SingleGraph("Map");
 	public HashMap<String,String> nodeMap = new HashMap<String,String>();
-	public String objectif = "unset";;
+	public String objectif = "unset";
+	public Couple<String,List<Attribute>> noeudPrecedent = null;
 
 	/**
 	 * This method is automatically called when "agent".start() is executed.
@@ -69,16 +70,12 @@ public class ExploAgent extends abstractAgent{
 		}
 		catch (FIPAException fe) { fe.printStackTrace(); }
 		
-		/*List<String> test = new LinkedList<String>();
-		test.add("Pouet");
-		test.add("Yolo");
-		Message message = new Message(TypeMessage.Smell,test);*/
-		
 		//Add the behaviours
 		addBehaviour(new ExploWalkBehaviour(this,realEnv));
 		//addBehaviour(new EnvoiMessage(this,"explorer",message));
 		addBehaviour(new ReceptionMessage(this));
 		System.out.println("the agent "+this.getLocalName()+ " is started");
+		graph.display();
 
 	}
 
@@ -89,14 +86,21 @@ public class ExploAgent extends abstractAgent{
 
 	}
 	
-	public void addExploredNode(String node){
+	public Boolean addExploredNode(String node){
+		Boolean exp = true;
 		if(!nodeMap.containsKey(node)){
-			graph.addNode(node);
+			graph.addNode(node).addAttribute("ui.label", node);
+			graph.getNode(node).addAttribute("ui.style", "fill-color: rgb(0,0,255);");
 			nodeMap.put(node, "Explored");
 		}
-		else{
+		else if(nodeMap.get(node).equals("Unexplored")){
 			nodeMap.replace(node, "Explored");
+			graph.getNode(node).addAttribute("ui.style", "fill-color: rgb(0,0,255);");
 		}
+		else
+			exp = false;
+		
+		return exp;
 	}
 	
 	public List<String> getUnexploredSuccessor(List<Couple<String,List<Attribute>>> lobs){
@@ -111,28 +115,51 @@ public class ExploAgent extends abstractAgent{
 		return liste;
 	}
 	
-	public void addUnexploredNodes(String position,List<String> nodes){
+	public void addUnexpNodes(String position,List<String> nodes){
 		for(String s : nodes){
 			if(!nodeMap.containsKey(s)){ //
-				graph.addNode(s);
+				graph.addNode(s).addAttribute("ui.label", s);
 				nodeMap.put(s, "Unexplored");
 				
+			}
+			else if(nodeMap.get(s).equals("Suspect")){
+				nodeMap.replace(s, "Unexplored");
+				graph.getNode(s).addAttribute("ui.style", "fill-color: rgb(0,0,0);");
 			}
 			if(graph.getEdge(position+","+s) == null && graph.getEdge(s+","+position) == null && position != s){
 				graph.addEdge(position+","+s, position, s).addAttribute("length", 1);
 			}
+			else if(graph.getEdge(position+","+s) == null && position != s){
+				graph.getEdge(s+","+position).addAttribute("length", 1);
+			}
+			else if(graph.getEdge(s+","+position) == null && position != s){
+				graph.getEdge(position+","+s).addAttribute("length", 1);
+			}
 		}
 	}
 	
-	public void sendExploredNodeInfo(String node){
+	public void addSuspectNodes(String position,List<String> nodes){
+		for(String s : nodes){
+			if(!nodeMap.containsKey(s)){ //
+				graph.addNode(s).addAttribute("ui.label", s);
+				graph.getNode(s).addAttribute("ui.style", "fill-color: rgb(255,0,0);");
+				nodeMap.put(s, "Suspect");
+				
+			}
+			if(graph.getEdge(position+","+s) == null && graph.getEdge(s+","+position) == null && position != s){
+				graph.addEdge(position+","+s, position, s).addAttribute("length", 9999);
+			}
+		}
+	}	
+	/*public void sendExploredNodeInfo(String node){
 		List<String> liste = new LinkedList<String>();
 		liste.add(node);
 		//System.out.println("Liste Explored : "+liste);
 		Message messageExplored = new Message(TypeMessage.Explored,liste);
 		addBehaviour(new EnvoiMessage(this,"Explorer",messageExplored));
-	}
+	}*/
 	
-	public void sendUnexploredNodeInfo(String myPosition,List<String> nodes){
+	public void sendNodesInfos(String myPosition,List<String> nodes){
 		List<String> liste = new LinkedList<String>(nodes);
 		liste.add(0, myPosition);
 		//System.out.println("unexp nodes"+nodes);
@@ -145,11 +172,13 @@ public class ExploAgent extends abstractAgent{
 		}
 	}
 	
-	public void moveToRandUnexpNode(String myPosition,List<String> unexpNodes){
+	public Boolean moveToRandUnexpNode(String myPosition,List<String> unexpNodes){
 		Random r= new Random();
-
+		List<String> suspects = getFlagedNodes("Suspect");
+		for(String s : suspects)
+			unexpNodes.remove(s);
 		int moveId=r.nextInt(unexpNodes.size());
-		move(myPosition, unexpNodes.get(moveId));	
+		return move(myPosition, unexpNodes.get(moveId));	
 	}
 	
 	public List<String> getFlagedNodes(String flag){
@@ -181,14 +210,24 @@ public class ExploAgent extends abstractAgent{
 		
 		else{ //Si non, explo terminée
 			System.out.println("J'ai tout vu "+nodeMap); 
-			graph.display();
+			//graph.display();
 
 		}
 		
 		return s;
 	}
 	
-	public String nextStepToObjective(String myPosition){
+	public Boolean randMove(String myPosition,List<String> liste){
+		
+		Random r= new Random();
+
+		int moveId=r.nextInt(liste.size());
+		String next = liste.get(moveId);
+		return move(myPosition,next);
+		
+	}
+	
+	public Boolean nextStepToObjective(String myPosition){
 		String next;
         Dijkstra dijkstra = new Dijkstra(Dijkstra.Element.EDGE, null, "length");
         
@@ -200,7 +239,45 @@ public class ExploAgent extends abstractAgent{
         // Print the shortest path from A to B
         System.out.println("Path"+dijkstra.getPath(graph.getNode(objectif)));
         next = dijkstra.getPath(graph.getNode(objectif)).getNodePath().get(1).toString(); //On degage le dernier noeud qui est le noeud courant
-       
-		return next;
+
+        return move(myPosition, next);
+	}
+	
+	public Boolean nextStepToClosestUnexplored(String myPosition){
+		String next = "unset";
+		int tmp = 9999;
+		Path tmp2;
+        Dijkstra dijkstra = new Dijkstra(Dijkstra.Element.EDGE, null, "length");
+        
+        // Compute the shortest paths in g from A to all nodes
+        dijkstra.init(graph);
+        dijkstra.setSource(graph.getNode(myPosition));
+        dijkstra.compute();
+        
+        //Choose the closest unexplored node
+        List<String> liste = getFlagedNodes("Unexplored");
+        for(String s : liste){
+        	tmp2 = dijkstra.getPath(graph.getNode(s));
+        	if(tmp2.size() < tmp){
+        		tmp = tmp2.size();
+        		next = tmp2.getNodePath().get(1).toString();      		
+        	}
+        }
+               
+        // Print the shortest path from A to B
+        //System.out.println("Path"+dijkstra.getPath(graph.getNode(objectif)));
+        //next = dijkstra.getPath(graph.getNode(objectif)).getNodePath().get(1).toString(); //On degage le dernier noeud qui est le noeud courant
+		//System.out.println("Noeud suivant :"+next);
+	    return move(myPosition, next);
+	}
+
+	public List<String> getSuccessors(String myPosition,List<Couple<String, List<Attribute>>> lobs) {
+		List<String> liste = new LinkedList<String>();
+		for(Couple<String, List<Attribute>> s : lobs){
+				liste.add(s.getL());	
+				liste.remove(myPosition);
+		}		
+		
+		return liste;
 	}
 }

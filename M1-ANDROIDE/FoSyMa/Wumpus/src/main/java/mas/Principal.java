@@ -37,8 +37,7 @@ public class Principal {
 	public static void main(String[] args){
 
 		//0) Create the real environment and the observed one
-		env= new Environment(ENVtype.DOROGOVTSEV, 10);
-
+		env= new Environment(ENVtype.GRID_W, 10);
 		//1), create the platform (Main container (DF+AMS) + containers + monitoring agents : RMA and SNIFFER)
 		rt=emptyPlatform(containerList);
 
@@ -192,19 +191,19 @@ public class Principal {
 		List<AgentController> agentList=new ArrayList<AgentController>();
 
 		//wumpus on container0
-//		c = containerList.get("container0");
-//		agentName="Wumpus1";
-//		try {
-//
-//
-//			Object[] objtab=new Object[]{env,agentName};//used to give informations to the agent
-//			AgentController	ag=c.createNewAgent(agentName,DummyWumpusAgent.class.getName(),objtab);
-//			agentList.add(ag);
-//			System.out.println(agentName+" launched");
-//		} catch (StaleProxyException e) {
-//			// TODO Auto-generated catch block
-//			e.printStackTrace();
-//		}
+		c = containerList.get("container0");
+		agentName="Wumpus1";
+		try {
+
+
+			Object[] objtab=new Object[]{env,agentName};//used to give informations to the agent
+			AgentController	ag=c.createNewAgent(agentName,DummyWumpusAgent.class.getName(),objtab);
+			agentList.add(ag);
+			System.out.println(agentName+" launched");
+		} catch (StaleProxyException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 
 //		agentName="Wumpus2";
 //		try {
@@ -264,7 +263,7 @@ public class Principal {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-//		
+		
 		c = containerList.get("container0");
 		agentName="Explo3";
 		try {
