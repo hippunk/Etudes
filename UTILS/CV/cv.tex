@@ -1,0 +1,62 @@
+% Exemple de CV utilisant la classe moderncv
+% Style classic en bleu
+% Article complet : http://blog.madrzejewski.com/creer-cv-elegant-latex-moderncv/
+\documentclass[11pt,a4paper]{moderncv}
+\moderncvtheme[purple]{classic}                
+\usepackage[utf8]{inputenc}
+\usepackage[top=1.1cm, bottom=1.1cm, left=2cm, right=2cm]{geometry}
+% Largeur de la colonne pour les dates
+\setlength{\hintscolumnwidth}{2.5cm}
+
+\firstname{Arthur}
+\familyname{Ramolet}
+\title{Etudiant en Informatique}              
+\address{55 rue notre dame de Nazareth}{75003 Paris}    
+\email{arthur.ramolet@hotmail.fr}                      
+\mobile{06 59 57 49 41} 
+\photo[60pt][0pt]{picture}
+
+
+\begin{document}
+\maketitle
+
+\section{Formations}
+\cventry{2014 -- 2015}{Master Informatique}{Université Paris 6}{}{}{Spécialité Agents distribués, robotique, recherche opérationnelle, interaction, décision}
+\cventry{2012 -- 2013}{Licence Professionnelle}{Lycée Gabriel-Touchard - Le Mans}{}{}{Spécialité Services Informatiques et Réseaux Industriels}
+\cventry{2010 -- 2014}{Licence Sciences pour l'ingénieur }{Université du Maine - Le Mans}{}{}{Spécialité Informatique}
+\cventry{2009 -- 2010}{Baccalauréat}{Lycée Gabriel-Touchard - Le Mans}{}{}{Série technologique, spécialité génie mécanique}
+
+\section{Compétences}
+\cvitem{Langages}{C,Java, PHP, HTML, CSS, Python, AS3, Ruby, Prolog, C++, Delphi, VB6.}
+\cvitem{Outils}{Apprentissage probabiliste, Décision automatique, Optimisation linéaire, Théorie Complexité, Méthodes heuristiques.}
+\cvitem{Analyse}{UML (Orienté Composants), Design d'IHM, Design Patterns.}
+\cvitem{Base de données}{Oracle, PostGreSQL, MySQL, PL/SQL, SQLite.}
+\cvitem{Systèmes}{Windows (XP, Seven, 8.1), Linux (Arch, CentOS, Ubuntu, Fedora).}
+\cvitem{Administration}{DHCP, DNS, FTP, SSH, Samba, NFS.}
+\cvitem{Réseaux}{Protocole IP, VLAN, Matériel CISCO.}
+\cvitem{Logiciels}{Libre Office, The Gimp, Blender, Talend.}
+\cvlanguage{Anglais}{lu, écrit, parlé}{}
+
+\section{Expérience}
+\cventry{Juin 2013\\à  Août 2013}{Stage consultant systèmes d'informations}{}{}{}{Refonte d'une partie du système d'information de la mairie de Pontault-Combault. 
+\begin{itemize}%
+\item Automatisation de la procédure d'inscription des élèves de la commune (Web Service, Talend, PHP, SQL).
+\item Simplification du système d'inscriptions des élèves aux activités périscolaires (Publipostage, SQL).
+\item Améliorations diverses des outils du portail interne de la mairie (PHP, PHPExcel, SQL).
+\end{itemize}}
+
+\cventry{Février 2013}{1er prix des 24h du code de l'ENSIM}{}{}{}{Réalisation d'un petit RPG old-school. (Nom équipe : PandaCoders). 
+\begin{itemize}%
+\item Fonctionalitées gra : Déplacements, Génération aléatoire de maps cohérentes.
+\item ns le code : Gestion de l'inventaire, Système de combats.
+\item Code source : https://github.com/hippunk/24hCodeRPG/.
+\item Lien du concours : http://www.les24hducode.fr/2014/Resultats.php.
+\end{itemize}}
+
+\section{Centres d'intérêt}
+\cvitem{Jeux vidéo}{Jeux Indépendants, Intérêt pour la conception (Notions de Game et Level design).}
+\cvitem{Jeux de sociétés}{Go, Jeux de plateaux, Jeux de rôles, Échecs, Shogi.}
+\cvitem{Hardware}{Connaissance des composants, Devis.}
+
+\end{document}
+
