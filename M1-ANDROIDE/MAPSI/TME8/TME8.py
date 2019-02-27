@@ -1,16 +1,23 @@
 # -*- coding: utf-8 -*-
 """
-Created on Mon Nov 24 10:55:18 2014
+Created on Mon Oct 13 10:51:07 2014
 
-@author: 3100208
+@author: 3000892
 """
+
+# -*- coding: utf-8 -*-
+
 
 import numpy as np
 import pickle as pkl
+import matplotlib.pyplot as plt
+import matplotlib.cm as cm
 from math import *
+from random import *
+
 
 # fonction de suppression des 0 (certaines variances sont nulles car les pixels valent tous la même chose)
-def woZeros(x):
+def woZeros(x): 
     y = np.where(x==0., 1., x)
     return y
 
@@ -18,45 +25,106 @@ def woZeros(x):
 # cette fonction donne 10 modèles (correspondant aux 10 classes de chiffres)
 # USAGE: theta = learnGauss ( X,Y )
 # theta[0] : modèle du premier chiffre,  theta[0][0] : vecteur des moyennes des pixels, theta[0][1] : vecteur des variances des pixels
-def learnGauss (X,Y):
+def learnGauss (X,Y): 
     theta = [(X[Y==y].mean(0),woZeros(X[Y==y].var(0))) for y in np.unique(Y)]
-    return (np.array(theta))
+    return (np.array(theta)) 
 
 # Application de TOUS les modèles sur TOUTES les images: résultat = matrice (nbClasses x nbImages)
 def logpobs(X, theta):
     logp = [[-0.5*np.log(mod[1,:] * (2 * np.pi )).sum() + -0.5 * ( ( x - mod[0,:] )**2 / mod[1,:] ).sum () for x in X] for mod in theta ]
     return np.array(logp)
-
-######################################################################
-######################### code rajouter ##############################
-
-def f ( x, w, b):
-    return (1 / (1 + exp(-(np.dot(x ,w) + b))))
     
-def log_vraisemblance(x,y,w,b):
-    somme = 0
-    result = f(x,w,b)
-    for i in range(0,len(y)):
-        Y = y[i]
-        somme += Y*log(result) +(1-Y)*log((1 - result))
-    return somme
+    
+    
+    
+    
+    
+# la fonction f du tme
+# x et w sont des vecteurs , b est une constante (je crois)   
+def f (x, w , b):
+    result = 0
+    for i in range (len(x)):
+        result = result + x[i]*w[i]    
+    return (1 / (1+ exp(-(result+b))))
 
-def derive_log_vrai(x,y,w,b):
-    dwj = np.zeros(len(w))
-    db = 0
-    for i in range(0,len(x)):
-        aux = y[i] - f(x,w,b)
-        db += aux
-        dwj[i] += x[i] * aux
-          
-    ## Tu peux améliorer ce qui suit si tu veux ##
-    tab = np.zeros(2,dtype=object)
-    tab[0] = dwj
-    tab[1] = db    
-    return tab
-          
+'''#calcul la vraisemblance comme dans le tme
+# y et x sont des tableaux
+def logvraisemblance (y,x,w,b):
+    result = 0
+    for i in range(len(y)):
+        result = y[i]* log(f(x[i],w,b))+(1-y[i])*(log(1-f(x[i],w,b)))
+    return result
 
+# la variable x est une matrice et y est un tableau
+#calcul la derivé du log selon wj    
+def Lwj(y,x,w,b):
+    wj = np.zeros(len(w))
+    for j in range(len(w)):
+        for i in range (len(y)):
+            wj[j]= wj[j] + x[i][j]*(y[i]-f(x[i],w,b))
+    return wj
+    
+    
+    
+#y est un vecteur , x est une matrice     
+#calcul la derivé du log
+def Lb(y,x,w,b):
+    bresultat = 0
+    for j in range (len(y)):
+            bresultat= bresultat + (y[j]-f(x[j],w,b))
+    return bresultat'''
+    
+def Lb_Lwj_L(x,y,w,b):
+    n=len(x)
+    nx=len(x[0])
+    wj = np.zeros(nx)
+    tf=np.zeros(n)
+    bresultat = 0
+    result = 0
+    for i in range(n):
+        tf[i]=f(x[i],w,b)
+        bresultat=bresultat + (y[i]-tf[i])
+        result =result + y[i]* log(tf[i])+(1-y[i])*(log(1-tf[i]))
 
+    for j in range(nx):
+        for i in range (n):
+            wj[j]= wj[j] + x[i][j]*(y[i]-tf[i])
+    return bresultat, wj, result
+    
+def classification(x, w, b):
+    y=np.zeros(len(w))
+    for i in range (len(w)):
+        if(f (x[i], w , b)>0.5): y[i]=1
+    else: y[i]=0
+    return y
+ 
+def iteration (x, y,w,b,epsilon, iteration):
+    wj = w
+    bresultat = b
+    stock = np.zeros(iteration)
+    for i in range (iteration):
+        print i
+        tmp = Lb_Lwj_L(x,y,wj,bresultat)
+        wj = wj + epsilon* tmp[1]
+        bresultat = bresultat + epsilon  *tmp[0]
+        stock[i]= tmp[2]
+        if i>1 and (stock[i-1]-stock[i])/stock[i-1]<0.001 : break
+    return wj , bresultat, stock    
+    
+def initialisation(epsilon, taille):
+    w = np.zeros(taille)
+    for i in range( taille):
+        w[i]= uniform(-1*epsilon, epsilon)
+    b = uniform(-1*epsilon, epsilon)
+    return w,b,epsilon
+        
+def learn (X,Y, n, epsilon, ite):
+    thetaRL = []
+    for i in range(n):
+        Yc = np.where(Y==i,1.,0.)
+        w,b,_= initialisation(epsilon,len(X[0]))
+        thetaRL.append(iteration (X,Yc, w,b,epsilon,ite))
+    return np.array(thetaRL)
 ######################################################################
 #########################     script      ############################
 
@@ -70,6 +138,8 @@ Y = data['Y']
 XT = data['XT']
 YT = data['YT']
 
+print "taillex=",len(X), "  et taille y=", len(Y)
+print len(X[0])
 theta = learnGauss ( X,Y ) # apprentissage
 
 logp  = logpobs(X, theta)  # application des modèles sur les données d'apprentissage
@@ -81,97 +151,28 @@ ypredT = logpT.argmax(0)
 print "Taux bonne classification en apprentissage : ",np.where(ypred != Y, 0.,1.).mean()
 print "Taux bonne classification en test : ",np.where(ypredT != YT, 0.,1.).mean()
 
-epsilon = 0.00005
+# Pour transformer le vecteur Y afin de traiter la classe 0:
+'''Yc0 = np.where(Y==0,1.,0.)
 
-###################### Apprentissage d'un modele binaire ######################
-alpha = []
+w,b,epsilon = initialisation(0.0001,len(X[0]))
+w ,b , liste = iteration (X,Yc0, w,b,epsilon,10)
+p = plt.figure()
+p = plt.plot (liste)
+plt.show()'''
 
-## Initialisation ##
-w0 = (1 + 1)*np.random.sample(len(X[0])) -1 # [0,*1[
-b0 =    np.random.sample() * epsilon
-alpha0 = [w0,b0]
-alpha.append(alpha0)
-#print alpha
-#print w0
 
-for i in range(0, len(X[0])):
-    w0[i] = w0[i] *epsilon
+thetaRL = learn(X,Y,10, 0.0004, 10)
 
-tab_vrai = []    
-## Recursion ##
-i=0
-encore = True
-while(encore):
-#for i in range(0):
-    v = log_vraisemblance(X[i],Y,alpha[i][0],alpha[i][1])
-    tab_vrai.append(v)
-    #print "v",v
-    tab_result_derive = derive_log_vrai(X[i],Y,alpha[i][0],alpha[i][1]) 
-    #print "d",len(tab_result_derive[0]),"b",tab_result_derive[1]
-    
-    ## Mise à  jour de b ##    
-    bi = alpha[i][1] + epsilon * tab_result_derive[1]
-    #print "bi",bi
-    
-    ## Mise à jour de w ##
-    walpha = alpha[i][0]
-    wi = np.zeros(len(walpha))
-    for j in range(len(walpha)):
-       wi[j] = walpha[j] + epsilon * tab_result_derive[0][j]
-    alpha.append(tab_result_derive)
-    
-    ## Calcul de la convergence ##
-    k = 1
-    if i>0:
-        k = tab_vrai[i] - tab_vrai[i-1]/tab_vrai[i]
-        print "k",k
-    if k <= 0.0001 or i > 100 :
-        encore = False
-    i += 1
-    
-print "Fin"
- 
-print tab_vrai 
-
-############ Paradigme un-contre-tous pour le passage au multi-classe #########
-Yc = np.zeros(10,dtype=object)
-for i in range(10): #il y a 10 cases dans le problème
-    Yc[i] = np.where(Y==i,1.,0.)
-    
-print Yc[0]
-print Yc[1]
-
-thetaRL = np.zeros(10,dtype=object)
-for i in range(10):
-    thetaRL[i] = learnGauss ( X,Yc[i] ) 
-
-fc = np.zeros(10)
-for i in range(10):
-    fc[i] = f(X[i],thetaRL[i][0][0],theta[i][0][1])
-print fc
-
-"""
 # si vos paramètres w et b, correspondant à chaque classe, sont stockés sur les lignes de thetaRL... Alors:
-pRL  = np.array([[1./(1+np.exp(-x.dot(mod[0][0]) - mod[0][1])) for x in X] for mod in thetaRL ])
-pRLT = np.array([[1./(1+np.exp(-x.dot(mod[0][0]) - mod[0][1])) for x in XT] for mod in thetaRL ])
-print pRL[0]
+
+pRL  = np.array([[1./(1+np.exp(-x.dot(mod[0]) - mod[1])) for x in X] for mod in thetaRL ])
+pRLT = np.array([[1./(1+np.exp(-x.dot(mod[0]) - mod[1])) for x in XT] for mod in thetaRL ])
 ypred  = pRL.argmax(0)
 ypredT = pRLT.argmax(0)
-print "ypred : ",ypred
-print "Taux bonne classification en apprentissage : ",np.where(ypred != Y[Y==0], 0.,1.).mean()
+print "Taux bonne classification en apprentissage : ",np.where(ypred != Y, 0.,1.).mean()
 print "Taux bonne classification en test : ",np.where(ypredT != YT, 0.,1.).mean()
-"""
 
-#print w0
-#print "X ",len(X[0]) #xi = ligne
-#print "\nY ",len(Y) #yi = chiffre correspondant
-#print "\nXT ", XT #T = test
-#print "\nYT ", YT
-#print "\ntheta ", theta[0] #(mu,sigma²)
-#print "\nlogp ",logp 
-#print "\nlogpT", logpT
-#print "\nypred ",ypred
-#print "\nypredT ", ypredT
+
 
 
 
