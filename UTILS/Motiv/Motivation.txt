@@ -1,0 +1,40 @@
+Madame, Monsieur,
+
+Étant actuellement développeur Unity 3D confirmé. L'opportunité de rejoindre l'équipe Cerveau et Conscience 
+dans le cadre d'un projet orienté recherche mêlant jeux vidéo et neurosciences a attiré toute mon attention. 
+
+//Condenser les 3 parties suivantes ?!
+(Appuyer sur des points d'illustration du CV)
+
+Mon expérience en tant qu'ingénieur de recherche au Serious Game Research Lab de l'Université Champollion m'a conduit à perfectionner mes compétences en Unity 3D/C# au travers de l'implémentation du prototype "Clone"; 
+Jeux sérieux dédié à la formation du personnel infirmier à l'organisation de l'emploi du temps.
+
+//Pas nécéssaire; déjà marqué sur CV
+Les besoins inhérents au développement de Serious Game m'ont également ammené à approfondir de nombreuses autres compétences, notament, l'administration système et réseaux ainsi que la modélisation de données 
+nécéssaires à l'implémentation d'un système de gestion et de collecte de traces. 
+Le travail de recherche effectué lors de la phase de modélisation des données ont également permis à l'équipe de réaliser une publication scientifique[1].
+
+J'ai également effectué un stage recherche au cours de mes études au laboratoire d'informatique de Paris 6. Ce stage m'a amené à approfondir mes connaissances en algorithmique ainsi qu'en
+développement d'outils pour la modélisation afin de fournir une extension Unity permettant d'assister à la mise en oeuvre du suivi de l'apprenant dans les jeux sérieux.
+Ces travaux sont utilisées par l'université pour le développement des prototypes en interne ainsi qu'abordés dans le cours "Ingénierie des Serious Games" et ont conduit à une publication.
+Ce stage m'a également permis de réaliser la visite de l'IUT de Chambéry en ayant à charge les choix d'activités ludiques et leur implémentation, et ce, afin de tester cette extension.
+Cette partie ayant été réalisée en réalité virtuelle pour le HTC-Vive, j'ai pu mettre en pratique ma capacité d'adaptation inhérente à mes études académiques pour me former rapidement à cette technologie
+et fournir une solution convaincante. 
+
+//Dispensable -> présentable en entretien
+//Faire sauter cette partie pour moins long ?
+Mes expériences personnelles ainsi que mes études m'ont également ammené à améliorer d'autres compétences qui sont un atout certain pour notre futur collaboration.
+Notament en Game Design, gestion d'équipe et de projets au travers de Game Jams et de mes nombreux travaux universitaires. 
+Mais également en IA et en mathématiques au travers de projets autour de systèmes multi-agents, d'apprentisage automatique, ainsi que du traitement du signal.
+
+Rejoindre l'équipe Cerveau et Conscience est pour moi l'opportunité mettre en pratique mes compétences afin de contribuer à la réalisation d'un projet de recherche à la pointe des dernières découvertes scientifiques sur le cerveau. 
+
+Je suis très motivé par le challenge technique et scientifique qu'implique le développement de jeux basés sur les neurosciences. //Changer terme neurosciences pour plus pertinent
+Être chargé de développement au sein de votre équipe est donc pour moi garantie d'en apprendre toujours plus sur les nouvelles technologies et de participer à leur évolution. 
+C'est avec plaisir que je vous rencontrerai pour vous exposer, mes motivations pour ce poste.
+
+Je vous prie d'agréer, Madame, Monsieur, l'expression de mes salutations distinguées.
+
+
+[1] https://www.researchgate.net/publication/331780754_The_Challenge_of_Designing_Interactive_Scenarios_to_Train_Nurses_on_Rostering_Problems_in_a_Virtual_Clinical_Unit
+[2] https://www.researchgate.net/publication/328212250_Un_systeme_d'aide_a_l'analyse_des_traces_des_apprenants_dans_les_jeux_serieux
