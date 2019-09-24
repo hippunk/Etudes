@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.6960 64-bit) (preloaded format=pdflatex 2019.2.16)  6 SEP 2019 16:48
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.6960 64-bit) (preloaded format=pdflatex 2019.2.16)  17 SEP 2019 21:13
 entering extended mode
 **./cv.tex
 (cv.tex
@@ -797,6 +797,7 @@ Now handling font encoding PD1 ...
 ("C:\Program Files\MiKTeX 2.9\tex/latex/00miktex\hyperref.cfg"
 File: hyperref.cfg 2002/06/06 v1.2 hyperref configuration of TeXLive
 )
+Package hyperref Info: Option `colorlinks' set `true' on input line 4393.
 Package hyperref Info: Option `unicode' set `true' on input line 4393.
 
 ("C:\Program Files\MiKTeX 2.9\tex/latex/hyperref\puenc.def"
@@ -821,7 +822,7 @@ Package hyperref Info: Hyper figures OFF on input line 6380.
 Package hyperref Info: Link nesting OFF on input line 6385.
 Package hyperref Info: Hyper index ON on input line 6388.
 Package hyperref Info: backreferencing OFF on input line 6395.
-Package hyperref Info: Link coloring OFF on input line 6400.
+Package hyperref Info: Link coloring ON on input line 6398.
 Package hyperref Info: Link coloring with OCG OFF on input line 6405.
 Package hyperref Info: PDF/A mode OFF on input line 6410.
 LaTeX Info: Redefining \ref on input line 6450.
@@ -844,28 +845,28 @@ Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 2
 )
 \Hy@SectionHShift=\skip80
 )
-Package hyperref Info: Option `breaklinks' set `true' on input line 21.
-Package hyperref Info: Option `bookmarksopen' set `true' on input line 21.
+Package hyperref Info: Option `breaklinks' set `true' on input line 33.
+Package hyperref Info: Option `bookmarksopen' set `true' on input line 33.
  (cv.aux)
 \openout1 = `cv.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 21.
-LaTeX Font Info:    ... okay on input line 21.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 21.
-LaTeX Font Info:    ... okay on input line 21.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 21.
-LaTeX Font Info:    ... okay on input line 21.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 21.
-LaTeX Font Info:    ... okay on input line 21.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 21.
-LaTeX Font Info:    ... okay on input line 21.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 21.
-LaTeX Font Info:    ... okay on input line 21.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 21.
-LaTeX Font Info:    ... okay on input line 21.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 21.
-LaTeX Font Info:    ... okay on input line 21.
-LaTeX Font Info:    Try loading font information for T1+lmr on input line 21.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 33.
+LaTeX Font Info:    ... okay on input line 33.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 33.
+LaTeX Font Info:    ... okay on input line 33.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 33.
+LaTeX Font Info:    ... okay on input line 33.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 33.
+LaTeX Font Info:    ... okay on input line 33.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 33.
+LaTeX Font Info:    ... okay on input line 33.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 33.
+LaTeX Font Info:    ... okay on input line 33.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 33.
+LaTeX Font Info:    ... okay on input line 33.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 33.
+LaTeX Font Info:    ... okay on input line 33.
+LaTeX Font Info:    Try loading font information for T1+lmr on input line 33.
 ("C:\Program Files\MiKTeX 2.9\tex/latex/lm\t1lmr.fd"
 File: t1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
@@ -895,7 +896,7 @@ Package grfext Info: Graphics extension search list:
 G,.JBIG2,.JB2,.eps]
 (grfext)             \AppendGraphicsExtensions on input line 456.
 )
-LaTeX Info: Redefining \microtypecontext on input line 21.
+LaTeX Info: Redefining \microtypecontext on input line 33.
 Package microtype Info: Generating PDF output.
 Package microtype Info: Character protrusion enabled (level 2).
 Package microtype Info: Using default protrusion set `alltext'.
@@ -920,14 +921,14 @@ ABD: EveryShipout initializing macros
 * layoutoffset:(h,v)=(0.0pt,0.0pt)
 * modes: 
 * h-part:(L,W,R)=(56.9055pt, 483.69687pt, 56.9055pt)
-* v-part:(T,H,B)=(85.35826pt, 731.23584pt, 28.45274pt)
+* v-part:(T,H,B)=(56.9055pt, 759.6886pt, 28.45274pt)
 * \paperwidth=597.50787pt
 * \paperheight=845.04684pt
 * \textwidth=483.69687pt
-* \textheight=731.23584pt
+* \textheight=759.6886pt
 * \oddsidemargin=-15.36449pt
 * \evensidemargin=-15.36449pt
-* \topmargin=-23.91173pt
+* \topmargin=-52.36449pt
 * \headheight=12.0pt
 * \headsep=25.0pt
 * \topskip=11.0pt
@@ -946,7 +947,7 @@ ABD: EveryShipout initializing macros
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
 \AtBeginShipoutBox=\box60
-Package hyperref Info: Link coloring OFF on input line 21.
+Package hyperref Info: Link coloring ON on input line 33.
 ("C:\Program Files\MiKTeX 2.9\tex/latex/hyperref\nameref.sty"
 Package: nameref 2016/05/21 v2.44 Cross-referencing by name of section
 
@@ -955,111 +956,95 @@ Package: gettitlestring 2016/05/16 v1.5 Cleanup title references (HO)
 )
 \c@section@level=\count288
 )
-LaTeX Info: Redefining \ref on input line 21.
-LaTeX Info: Redefining \pageref on input line 21.
-LaTeX Info: Redefining \nameref on input line 21.
+LaTeX Info: Redefining \ref on input line 33.
+LaTeX Info: Redefining \pageref on input line 33.
+LaTeX Info: Redefining \nameref on input line 33.
 
 (cv.out) (cv.out)
 \@outlinefile=\write4
 \openout4 = `cv.out'.
 
 \makecvheaddetailsbox=\box61
-LaTeX Font Info:    Try loading font information for OT1+lmr on input line 23.
+LaTeX Font Info:    Try loading font information for OT1+lmr on input line 39.
  ("C:\Program Files\MiKTeX 2.9\tex/latex/lm\ot1lmr.fd"
 File: ot1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
-LaTeX Font Info:    Try loading font information for OML+lmm on input line 23.
+LaTeX Font Info:    Try loading font information for OML+lmm on input line 39.
 
 ("C:\Program Files\MiKTeX 2.9\tex/latex/lm\omllmm.fd"
 File: omllmm.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
-LaTeX Font Info:    Try loading font information for OMS+lmsy on input line 23.
+LaTeX Font Info:    Try loading font information for OMS+lmsy on input line 39.
 
 
 ("C:\Program Files\MiKTeX 2.9\tex/latex/lm\omslmsy.fd"
 File: omslmsy.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
-LaTeX Font Info:    Try loading font information for OMX+lmex on input line 23.
+LaTeX Font Info:    Try loading font information for OMX+lmex on input line 39.
 
 
 ("C:\Program Files\MiKTeX 2.9\tex/latex/lm\omxlmex.fd"
 File: omxlmex.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <10> on input line 23.
+(Font)              <10> on input line 39.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <7> on input line 23.
+(Font)              <7> on input line 39.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <5> on input line 23.
+(Font)              <5> on input line 39.
 
 (C:\Users\Arthur\AppData\Roaming\MiKTeX\2.9\tex/latex/microtype\mt-mvs.cfg
 File: mt-mvs.cfg 2006/07/05 v1.1 microtype config. file: Marvosym Euro (RS)
 )
 \makecvheadpicturebox=\box62
-<picture.jpg, id=31, 130.4875pt x 160.6pt>
-File: picture.jpg Graphic file (type jpg)
-<use picture.jpg>
-Package pdftex.def Info: picture.jpg  used on input line 23.
-(pdftex.def)             Requested size: 0.0pt x 0.0pt.
 \makecvheaddetailswidth=\skip81
 \makecvheadpicturewidth=\skip82
 \makecvheadnamebox=\box63
 
-Underfull \hbox (badness 10000) in paragraph at lines 23--23
+Underfull \hbox (badness 10000) in paragraph at lines 39--39
 
  []
 
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <10.95> on input line 23.
+(Font)              <10.95> on input line 39.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <8> on input line 23.
+(Font)              <8> on input line 39.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <6> on input line 23.
+(Font)              <6> on input line 39.
+
+Overfull \hbox (2.40443pt too wide) in paragraph at lines 84--84
+ []|[]\T1/lmr/m/n/10.95 (-20) Programmation[]|
+ []
+
 [1
 
-{C:/Users/Arthur/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map} <./picture.
-jpg>]
-Underfull \hbox (badness 1158) in paragraph at lines 83--83
-\T1/lmr/bx/n/10.95 nement des défenses im-mu-ni-taires dans l'organisme en Unit
-y C#.\T1/lmr/m/n/10.95 (+20) ,
- []
-
-[2]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 106.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 106.
+{C:/Users/Arthur/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 96.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 96.
  (cv.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 106.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 106.
-
-
-Package rerunfilecheck Warning: File `cv.out' has changed.
-(rerunfilecheck)                Rerun to get outlines right
-(rerunfilecheck)                or use package `bookmark'.
-
-Package rerunfilecheck Info: Checksums for `cv.out':
-(rerunfilecheck)             Before: 776D52684F97FF5246323AA697ADB55D;725
-(rerunfilecheck)             After:  53A66D5C5CC92F53C7B8EFCBF5552416;720.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 96.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 96.
+Package rerunfilecheck Info: File `cv.out' has not changed.
+(rerunfilecheck)             Checksum: 0DACBE7C960336E016A89F3EBD12A803;702.
  ) 
 Here is how much of TeX's memory you used:
- 30843 strings out of 492946
- 572067 string characters out of 3135524
- 641118 words of memory out of 3000000
+ 30823 strings out of 492946
+ 571870 string characters out of 3135524
+ 643302 words of memory out of 3000000
  34312 multiletter control sequences out of 15000+200000
- 594592 words of font info for 82 fonts, out of 3000000 for 9000
+ 593108 words of font info for 75 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 69i,12n,65p,770b,335s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 69i,14n,65p,801b,344s stack positions out of 5000i,500n,10000p,200000b,50000s
 {C:/Program Files/MiKTeX 2.9/fonts/enc/dvips/lm/lm-ec.enc}<C:/Program Files/M
 iKTeX 2.9/fonts/type1/public/lm/lmbx10.pfb><C:/Program Files/MiKTeX 2.9/fonts/t
-ype1/public/lm/lmbxi10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/lm/l
-mr10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/lm/lmr12.pfb><C:/Progr
-am Files/MiKTeX 2.9/fonts/type1/public/lm/lmr17.pfb><C:/Program Files/MiKTeX 2.
-9/fonts/type1/public/lm/lmri10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/pub
-lic/lm/lmro10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/lm/lmro17.pfb
-><C:/Users/Arthur/AppData/Roaming/MiKTeX/2.9/fonts/type1/public/marvosym/marvos
-ym.pfb>
-Output written on cv.pdf (2 pages, 238022 bytes).
+ype1/public/lm/lmr10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/lm/lmr
+12.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/lm/lmr17.pfb><C:/Program
+ Files/MiKTeX 2.9/fonts/type1/public/lm/lmro10.pfb><C:/Program Files/MiKTeX 2.9
+/fonts/type1/public/lm/lmro17.pfb><C:/Users/Arthur/AppData/Roaming/MiKTeX/2.9/f
+onts/type1/public/marvosym/marvosym.pfb>
+Output written on cv.pdf (1 page, 200346 bytes).
 PDF statistics:
- 84 PDF objects out of 1000 (max. 8388607)
- 9 named destinations out of 1000 (max. 500000)
- 19522 words of extra memory for PDF output out of 20736 (max. 10000000)
+ 72 PDF objects out of 1000 (max. 8388607)
+ 7 named destinations out of 1000 (max. 500000)
+ 19509 words of extra memory for PDF output out of 20736 (max. 10000000)
 
