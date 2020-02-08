@@ -1,0 +1,24 @@
+Bonjour,
+
+Je cherche actuellement un poste de développeur au sein d'un studio de développement de jeux vidéo. 
+Kylotonn correspond à mes critères de recherche, c'est donc suite à votre offre que je vous propose ma candidature au poste de Programmeur / Programmeuse Moteur.
+
+Actuellement développeur Outils / Gameplay, J'ai travaillé sur de nombreux projets professionnels et personnels en Unity C# notamment le jeu sérieux Clone pour la formation du personnel infirmier 
+ainsi que de multiples participations à des Game Jams. Vous pourrez trouver le détail de ces différents projets dans le CV ci-joint.
+
+Je suis très motivé par l'opportunité d'acquérir les compétences liées au développement moteur. J'ai déjà un bon niveau en C, 
+qui est le langage par lequel j'ai fait mon apprentissage de la programmation et suis déjà à l'aise avec la gestion manuelle des ressources de la machine et la programmation concurente.
+L'utilisation régulière du C++ ainsi que de nombreux autres langages orienté objet me permettrons d'être directement opérationnel 
+et autodidacte sur l'acquisition des compétences requises et d'assurer la livraison du code dans les délais. 
+Aussi, j'apprends actuellement OpenGL en autodidacte ce qui me permet d'acquérir les fondamentaux des pipelines 3D.
+
+Je dispose également de très bonnes compétences en Mathématiques, Intelligence artificielle et en Réseaux/Administration Système acquises au cours de mon Master, ainsi que 
+des bases en graphisme et modélisation 3D que j'ai pu développer sur mes projets personnels.
+
+Je dirais que mes principaux atouts sont d'être capable d'apprendre de nouvelles compétences rapidement 
+lorsque je suis confronté à de nouveaux problèmes et de prototyper rapidement afin de faire de la preuve de concept.
+
+Je serais ravi de vous rencontrer afin de vous présenter mon profil en détail et faire davantage connaissance.
+
+Cordialement,
+Arthur Ramolet

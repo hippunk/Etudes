@@ -1,0 +1,19 @@
+Bonjour,
+
+Je cherche actuellement un poste de développeur Unity C# d'une équipe à taille humaine. 
+Koalabs correspond à mes critères de recherche, c'est donc suite à votre offre que je vous propose ma candidature au poste de Développeur Unity 3D.
+
+J'ai travaillé sur de nombreux projets professionnels et personnels en Unity C# notamment le jeu sérieux Clone pour la formation du personnel infirmier 
+ainsi que de multiples participations à des Game Jams. Vous pourrez trouver le détail de ces différents projets dans le CV ci-joint.
+
+Je dispose également de très bonnes compétences en Intelligence artificielle (Graphes, BehaviourTree, Systèmes multi-agent, Analyse de données, etc.) 
+et en Réseaux/Administration Système (Modélisation et mise en oeuvre de DB, Configuration et maintenance serveurs, interopérabilité systèmes réseaux avec applications) acquises au cours de mon Master,  ainsi que 
+des bases en graphisme et modélisation 3D que j'ai pu développer sur mes projets personnels (Gimp, Blender, Photoshop).
+
+Pour faire plus court, je dirais que mes principaux atouts sont d'être capable d'apprendre de nouvelles compétences rapidement 
+lorsque je suis confronté à de nouveaux problèmes et de prototyper rapidement afin de faire de la preuve de concept.
+
+Je serais ravi de vous rencontrer afin de vous présenter mon profil en détail et faire davantage connaissance.
+
+Cordialement,
+Arthur Ramolet
