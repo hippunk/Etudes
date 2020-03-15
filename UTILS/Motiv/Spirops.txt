@@ -1,4 +1,21 @@
-Bonjour
+Bonjour,
 
-Actuellement en poste en tant que IT Manager chez Kylotonn, je cherche un emplois qui soit davantage en adéquation avec mes compétences.
-Etant développeur, 
+Je cherche actuellement un poste de développeur au sein d'une équipe à taille humaine et dédiée à la recherche.
+SpirOps me semble être l'environnement idéal à la poursuite de mon projet professionnel, c'est donc suite à votre offre que je vous propose ma candidature au poste de Développeur C/C++ R&D Polyvalent.
+
+J'ai eu l'occasion lors de mes précédentes expériences de travailler sur des projets orientés R/D en Unity C# notamment 
+le jeu sérieux Clone pour la formation du personnel infirmier, ainsi qu'un outil permettant d'assiter le suivi des traces des apprenants dans les jeux sérieux.
+Ces deux projets ont conduit à des publications scientifiques.
+
+Egalement passionné de programmation en général, j'ai consacré du temps à de nombreux projets notament plusieurs participations à des GameJams, ainsi que des projets universitaires orientés 
+multi-agent dont vous pourrez trouver le détail dans le CV ci-joint.
+
+Je suis très motivé par l'opportunité d'acquérir les compétences liées au développement C++. 
+J'ai déjà une bonne connaissance du C standard et suis familier des contraintes de la programmation bas-niveau.
+L'utilisation occasionnelle du C++ ainsi que de nombreux autres langages orientés objet me permettront d'être directement opérationnel 
+et autodidacte sur l'acquisition des compétences requises et d'assurer la production du code en équipe et dans les délais. 
+
+Je serais ravi de vous rencontrer afin de vous présenter mon profil plus en détail et de faire connaissance avec vos équipes.
+
+Cordialement,
+Arthur Ramolet

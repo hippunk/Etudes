@@ -1,0 +1,106 @@
+% Exemple de CV utilisant la classe moderncv
+% Style classic en bleu
+% Article complet : http://blog.madrzejewski.com/creer-cv-elegant-latex-moderncv/
+\documentclass[11pt,a4paper]{moderncv}
+
+\moderncvtheme[purple]{classic}                
+\usepackage[utf8]{inputenc}
+\usepackage[top=3cm, bottom=1cm, left=2cm, right=2cm]{geometry}
+
+% Largeur de la colonne pour les dates
+\setlength{\hintscolumnwidth}{2.5cm}
+
+\firstname{Arthur}
+\familyname{Ramolet}
+\title{Développeur généraliste}              
+\address{55 rue notre dame de Nazareth}{75003 Paris}    
+\email{arthur.ramolet@hotmail.fr}                      
+\mobile{06 59 57 49 41} 
+\photo[0pt][0pt]{picture}
+
+\begin{document}
+\maketitle
+\section{Expérience}
+\cventry{Janvier 2018\\à Janvier 2019}{Ingénieur de recherche au SGRL à l'université Champollion}{}{}{}{Développement d'un jeu sérieux (Clone) pour la formation du personnel infirmier à l'organisation de l'emploi du temps.
+\begin{itemize}
+\item  Conception, développement, test et expérimentation du jeu suivant les données fournies par les experts métiers et les experts pédagogiques (Unity C\#, Javascript, XML).
+\item {Corrections et maintenance sur d'autres projets de l'équipe : Mecagenius et  EASYRMM }
+\item {Développement d'un prototype de jeu type flappy bird contrôlé par un vélo d'appartement connecté (Unity, C\#, ANT+).}
+\item {Tutorat des étudiants du Master AMINJ sur la conception d'une application en réalité augmentée pour la promotion du patrimoine (Unity C\#,Vuforia).}
+\item {Formation des étudiants du Master AMINJ à l'utilisation d'Unity et d'Articy.}
+\end{itemize}}
+
+\cventry{Février 2017\\à Août 2017}{Stage recherche au LIP6, équipe MOCAH.}{}{}{}{Du formalisme Entité - Composant - Système à la modélisation d’un Serious Game par un réseau de Petri.
+\begin{itemize}
+\item  Développement de la visite virtuelle de l’IUT de Chambéry (Unity, C\#, HTC-Vive). 
+\item { Réalisation d'un outil permettant d'étiqueter des mécaniques de jeu afin de générer un réseau de pétri permettant l'analyse du suivi du joueur.}
+\end{itemize}}
+
+\cventry{Juin 2013\\à  Août 2013}{Stage consultant systèmes d’informations chez Synergie Associés}{}{}{}{Refonte d'une partie du système d'information de la mairie de Pontault-Combault. 
+\begin{itemize}%
+\item Automatisation de la procédure d'inscription des élèves de la commune (Web Service, Talend, PHP, SQL).
+\item Simplification du système d'inscription des élèves aux activités périscolaires.
+\item Améliorations des outils du portail interne de la mairie (PHP, PHPExcel, SQL).
+\end{itemize}}
+
+\section{Compétences}
+\cvitem{Langages}{C\#, PHP, C/C++, SQL, HTML, CSS, Java, Python, Prolog, NetLogo, Javascript, AS3, Ruby, Delphy, VB6.}
+\cvitem{Outils}{Apprentissage probabiliste, Décision automatique, Traitement du signal, Systèmes Multi-Agents , Optimisation linéaire, Complexité Algorithmique.}
+\cvitem{Analyse}{UML, IHM, UX, Design Patterns.}
+\cvitem{Réseaux}{Apache, DHCP, DNS, FTP, SSH, Samba, NFS.}
+\cvitem{Logiciels}{Libre Office, Unity, RPGMaker, The Gimp, Blender, Talend.}
+\cvlanguage{Anglais}{lu, écrit, parlé.}{}
+
+\section{Formation}
+\cventry{2014 -- 2017}{Master ANDROIDE}{Université Paris Pierre et Marie Curie}{}{}{Spécialité Agents distribués, robotique, recherche opérationnelle, interaction, décision.}
+\cventry{2010 -- 2014}{Licence Sciences pour l'ingénieur / Licence Professionnelle}{Université du Maine - Le Mans}{}{}{Spécialité Informatique / Spécialité Services Informatiques et Réseaux Industriels.}
+
+\newpage
+\section{Projets personnels}
+
+\cventry{Avril 2018}{Participation à la Ludum Dare 41 en tant que développeur principal et game designer sur le jeu Axe and Roses.}{https://ldjam.com/events/ludum-dare/41/axe-and-roses-a-barbarian-date-simulator}{}{}{
+\begin{itemize}
+\item  Design et implémentation du moteur de dialogue et son outil d'intégration sous forme d'arbre de dialogues. 
+\item {Organisation et gestion des programmeurs sur le développement des différentes briques de jeu.}
+\item {Relai et organisation entre les équipes dialogues graphismes et son avec les programmeurs pour l'intégration du contenu.}
+\end{itemize}}
+
+\cventry{Decembre 2017}{Participation à la Ludum Dare 40 en tant que développeur sur le jeu \textit{Didgeribug}}{https://ldjam.com/events/ludum-dare/40/didgeribug}{}{}{
+\begin{itemize}
+\item  Design des mécaniques suivant les 3C conjointement avec le game designer. 
+\item {Organisation et gestion des programmeurs sur le développement et l'intégration des éléments de gameplay.}
+\item  Intégration des ressources graphiques et conception de l'IHM.
+\end{itemize}}
+
+\section{Projets universitaires}
+
+\cventry{Novembre à Décembre 2016}
+{Développement d'un Serious Game pour l'apprentisage du fonctionnement des défenses immunitaires dans l'organisme en Unity C\#.} { https://github.com/hippunk/ISGProjet}{}{}{
+\begin{itemize}
+\item Choix et modélisation de mécaniques de jeu correspondant aux connaissances à enseigner.
+\item Implémentation des briques de gameplay et intégration des ressources graphiques choisies suivant le thème du jeu.
+\end{itemize}
+}
+\cventry{Septembre à Décembre 2016}
+{Utilisation d'un environnement de simulation pour expérimenter différentes stratégies de coordination de drones pour la défense en NetLogo }{ https://github.com/hippunk/Convoi}{}{}{
+\begin{itemize}
+\item Familiarisation avec l'environnement de simulation et le langage NetLogo
+\item Développement des mécanismes et règles caractérisant les drones et agents ennemis suivant le modèle \textit{belief–desire–intention}
+\item Observation et analyse des différentes stratégies implémentées
+\end{itemize}}
+
+\cventry{Décembre 2016 à Janvier 2017}{Développement d'un environnement de simulation en C++/SDL pour la reproduction de résultat de recherche sur les comportements proies/prédateurs}{ https://gitlab.com/phlf/IAR\_project   }{}{}{
+\begin{itemize}
+\item Modélisation et implémentation de l'architecture logicielle et la perception des agents
+\item {Suivi et apprentissage des règles de codage du développeur principal et auto-formation au standard C++11.}
+\end{itemize}}
+
+\section{Centres d'intérêt}
+\cvitem{Jeux vidéo}{Jeux Indépendants, Intérêt pour la conception (Notions de Game et Level design). Création amateur de jeux.}
+\cvitem{Jeux de société}{Go, Jeux de plateaux, Jeux de rôles, Échecs.}
+\cvitem{Hardware}{Intégrateur amateur, bonne connaissance des nouvelles technologies.}
+\cvitem{Sport}{Natation et escalade en amateur.}
+\cvitem{Musique}{Guitare}
+
+\end{document}
+
