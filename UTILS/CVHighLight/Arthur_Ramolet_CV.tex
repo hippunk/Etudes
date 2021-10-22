@@ -1,0 +1,130 @@
+% Exemple de CV utilisant la classe moderncv
+% Style classic en bleu
+% Article complet : http://blog.madrzejewski.com/creer-cv-elegant-latex-moderncv/
+\documentclass[11pt,a4paper]{moderncv}
+
+\moderncvtheme[purple]{classic}                
+\usepackage[utf8]{inputenc}
+\usepackage[top=1.5cm, bottom=1.5cm, left=1.5cm, right=1.5cm]{geometry}
+
+% Largeur de la colonne pour les dates
+\setlength{\hintscolumnwidth}{2.5cm}
+
+\firstname{Arthur}
+\familyname{Ramolet}
+\title{Développeur outils / généraliste}              
+\address{44 rue de la Bruyère}{78300 Poissy}    
+\email{arthur.ramolet@hotmail.fr}                      
+\mobile{06 59 57 49 41} 
+
+
+\begin{document}
+\maketitle
+\section{Expérience}
+
+\cventry{Juin 2020\\à Aujourd'hui}{Développeur outil Python et \textcolor{violet}{\textbf{C\#}} à Hesion}{}{}{}{Développement d'outils pour la gestion des données internes ainsi que l'automatisation des processus de collecte et traitement des données.  
+\begin{itemize}
+\item  {Développement d'outils pour l'annotation et l'évaluation des métadonnées sur des images issues de sites client. (Python, \textcolor{violet}{\textbf{C\#}})}
+\item {Implémentation de scripts pour l’entraînement de modèles de DeepLearning. (Python)}
+\item {Architecture et automatisation du processus de gestion de données. (Python, \textcolor{violet}{\textbf{C\#}},Azure DevOps)}
+\item {Collaboration avec prestataire externe pour l'annotation des métadonnées.}
+\item {Architecture et automatisation du processus de génération de version pour déploiement automatique.(Python, \textcolor{violet}{\textbf{C\#}},Azure DevOps)}
+\end{itemize}}
+
+\cventry{Janvier 2020\\à Février 2020}{IT Manager à Kylotonn}{}{}{}{Gestion, maintenance et amélioration du parc informatique chez Kylotonn Racing
+\begin{itemize}
+\item  {Amélioration et automatisation du processus d'installation des machines.}
+\item {Développement d'\textcolor{violet}{\textbf{outils C\#}} pour le monitoring du parc informatique}
+\item {Maintenance et dépannage des machines.}
+\end{itemize}}
+
+\cventry{Janvier 2018\\à Janvier 2019}{Ingénieur de recherche au SGRL à l'université Champollion}{}{}{}{Développement d'un \textcolor{violet}{\textbf{jeu sérieux}} (Clone) pour la formation du personnel infirmier à l'organisation de l'emploi du temps.
+\begin{itemize}
+\item  \textcolor{violet}{\textbf{Conception, développement, test et expérimentation du jeu}} suivant les données fournies par les experts métiers et les experts pédagogiques (\textcolor{violet}{\textbf{Unity C\#}}, Javascript, XML).
+\item {Corrections et maintenance sur d'autres projets de l'équipe : Mecagenius et  EASYRMM }
+\item {Développement d'un \textcolor{violet}{\textbf{prototype de jeu}} type flappy bird contrôlé par un vélo d'appartement connecté (\textcolor{violet}{\textbf{Unity, C\#}}, ANT+).}
+\item {Tutorat des étudiants du Master AMINJ sur la conception d'une application en \textcolor{violet}{\textbf{réalité augmentée}} pour la promotion du patrimoine (\textcolor{violet}{\textbf{Unity C\#,Vuforia}}).}
+\item {Formation des étudiants du Master AMINJ à l'utilisation d'\textcolor{violet}{\textbf{Unity et d'Articy}}.}
+\end{itemize}}
+
+\cventry{Février 2017\\à Août 2017}{Stage recherche au LIP6, équipe MOCAH}{}{}{}{Du formalisme \textcolor{violet}{\textbf{Entité - Composant - Système}} à la modélisation d’un Serious Game par un réseau de Petri.
+\begin{itemize}
+\item  Développement de la \textcolor{violet}{\textbf{visite virtuelle}} de l’IUT de Chambéry (\textcolor{violet}{\textbf{Unity, C\#, HTC-Vive}}). 
+\item { Réalisation d'un outil permettant d'étiqueter des mécaniques de jeu afin de générer un réseau de pétri permettant l'analyse du suivi du joueur.}
+\end{itemize}}
+
+\cventry{Juin 2013\\à  Août 2013}{Stage consultant systèmes d’informations chez Synergie Associés}{}{}{}{Refonte d'une partie du système d'information de la mairie de Pontault-Combault. 
+\begin{itemize}%
+\item Automatisation de la procédure d'inscription des élèves de la commune (Web Service, Talend, PHP, SQL).
+\item Simplification du système d'inscription des élèves aux activités périscolaires.
+\item Améliorations des outils du portail interne de la mairie (PHP, PHPExcel, SQL).
+\end{itemize}}
+
+\section{Compétences}
+\cvitem{Langages}{Python, \textcolor{violet}{\textbf{C\#}}, PHP, C/C++, SQL, HTML, CSS, Java, Prolog, NetLogo, Ruby.}
+\cvitem{Outils}{Apprentissage probabiliste, DevOps/MLOps, Décision automatique, Traitement du signal, Systèmes Multi-Agents , Optimisation linéaire, Complexité Algorithmique.}
+\cvitem{Analyse}{\textcolor{violet}{\textbf{UML, IHM, UX, Design Patterns}}.}
+\cvitem{Réseaux}{Apache, DHCP, DNS, FTP, SSH, Samba, NFS.}
+\cvitem{Logiciels}{Libre Office, \textcolor{violet}{\textbf{Unity, RPGMaker, The Gimp, Blender}}, Talend.}
+\cvlanguage{Anglais}{\textcolor{violet}{\textbf{lu, écrit, parlé.}}}{}
+
+\newpage
+
+\section{Formation}
+\cventry{2014 -- 2017}{Master ANDROIDE}{Université Paris Pierre et Marie Curie}{}{}{Spécialité Agents distribués, robotique, recherche opérationnelle, interaction, décision.}
+\cventry{2010 -- 2014}{Licence Sciences pour l'ingénieur / Licence Professionnelle}{Université du Maine - Le Mans}{}{}{Spécialité Informatique / Spécialité Services Informatiques et Réseaux Industriels.}
+
+
+\section{Projets personnels}
+
+\cventry{Novembre 2019\\ à Aujourd'hui}{Création d'un \textcolor{violet}{\textbf{jeu smartphone}} hypercasual}{https://hippunk.itch.io/bubblesort}{}{}{
+\begin{itemize}
+\item {Prototypage et implémentation des mécaniques. (\textcolor{violet}{\textbf{Unity,C\#}})} 
+\item {Playtests et collecte des retours des joueurs pour l'amélioration des mécaniques et modifications de gameplay.}
+\end{itemize}}
+
+\cventry{Avril 2018}{Participation à la Ludum Dare 41  en tant que développeur principal et game designer sur le jeu Axe and Roses.}{https://ldjam.com/events/ludum-dare/41/axe-and-roses-a-barbarian-date-simulator}{}{}{
+\begin{itemize}
+\item  Design et implémentation du moteur de dialogue et son outil d'intégration sous forme d'arbre de dialogues. (\textcolor{violet}{\textbf{Unity, C\#}})
+\item {Organisation et gestion des programmeurs sur le développement des différentes briques de jeu.}
+\item {Relai et organisation entre les équipes dialogues graphismes et son avec les programmeurs pour l'intégration du contenu.}
+\end{itemize}}
+
+\cventry{Decembre 2017}{Participation à la Ludum Dare 40 en tant que développeur sur le jeu \textit{Didgeribug}}{https://ldjam.com/events/ludum-dare/40/didgeribug}{}{}{
+\begin{itemize}
+\item  Design des mécaniques suivant les 3C conjointement avec le game designer. 
+\item {Organisation et gestion des programmeurs sur le développement et l'intégration des éléments de gameplay. (\textcolor{violet}{\textbf{Unity, C\#}})}
+\item  Intégration des ressources graphiques et conception de l'IHM.
+\end{itemize}}
+
+\section{Projets universitaires}
+
+\cventry{Novembre à Décembre 2016}
+{Développement d'un \textcolor{violet}{\textbf{Serious Game}} pour l'apprentisage du fonctionnement des défenses immunitaires dans l'organisme en \textcolor{violet}{\textbf{Unity C\#}}.} { https://github.com/hippunk/ISGProjet}{}{}{
+\begin{itemize}
+\item \textcolor{violet}{\textbf{Choix et modélisation de mécaniques de jeu}} correspondant aux connaissances à enseigner.
+\item \textcolor{violet}{\textbf{Implémentation des briques de gameplay}} et intégration des ressources graphiques choisies suivant le thème du jeu.
+\end{itemize}
+}
+\cventry{Septembre à Décembre 2016}
+{Utilisation d'un \textcolor{violet}{\textbf{environnement de simulation}} pour expérimenter différentes stratégies de coordination de drones pour la défense en NetLogo }{ https://github.com/hippunk/Convoi}{}{}{
+\begin{itemize}
+\item Familiarisation avec l'environnement de simulation et le langage NetLogo
+\item Développement des mécanismes et règles caractérisant les drones et agents ennemis suivant le modèle \textit{belief–desire–intention}
+\item Observation et analyse des différentes stratégies implémentées
+\end{itemize}}
+
+\cventry{Décembre 2016 à Janvier 2017}{Développement d'un \textcolor{violet}{\textbf{environnement de simulation}} en C++/SDL pour la reproduction de résultat de recherche sur les comportements proies/prédateurs}{ https://gitlab.com/phlf/IAR\_project   }{}{}{
+\begin{itemize}
+\item Modélisation et implémentation de l'architecture logicielle et la perception des agents
+\item {Suivi et apprentissage des règles de codage du développeur principal et auto-formation au standard C++11.}
+\end{itemize}}
+
+\section{Centres d'intérêt}
+\textcolor{violet}{\textbf{
+\cvitem{Jeux vidéo}{Jeux Indépendants, Intérêt pour la conception (Notions de Game et Level design). Création amateur de jeux.}
+\cvitem{Jeux de société}{Go, Jeux de plateaux, Jeux de rôles, Échecs.}
+\cvitem{Hardware}{Intégrateur amateur, bonne connaissance des nouvelles technologies.}}}
+
+\end{document}
+
