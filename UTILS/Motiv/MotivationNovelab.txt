@@ -1,6 +1,6 @@
 Madame, Monsieur,
 
-Je vous écrit à la suite de votre annonce sur l'afjv pour le poste de VR Gameplay Programmer - Unity.
+Je vous écris à la suite de votre annonce sur l'afjv pour le poste de VR Gameplay Programmer - Unity.
 Étant actuellement développeur Outil C# et Python chez Hesion, je suis actuellement à la recherche 
 d'un poste qui soit plus en adéquation avec mes expériences précédentes, ainsi que mes centres d'intérets.
 
@@ -11,8 +11,8 @@ Avec l'aide de l'équipe DevOps, nous avons architecturé une solution afin d'au
 
 En tant qu'ingénieur de recherche au Serious Game Research Lab de l'Université Champollion, j'ai pu mettre à contribution mes compétences en Unity C# avec l'aide des expert en ingénerie pédagogique 
 pour développer le prototype d'un jeu sérieux "Clone" pour la formation du personnel infirmier à l'organisation de l'emploi du temps. 
-Nous avons également réaliser en parallère un prototype de jeu controllé par un vélo d'appartement connecté,
-participer au portage du jeu sérieux MECAGENIUS de flash vers Unity et tutorer les étudiants du master AMINJ à la réalisation d'une application AR de découverte du patrimoine (Unity C#, Vuforia, Geolocalisation)
+Nous avons également réalisé en parallère un prototype de jeu controllé par un vélo d'appartement connecté,
+participé au portage du jeu sérieux MECAGENIUS de flash vers Unity et tutoré les étudiants du master AMINJ à la réalisation d'une application AR de découverte du patrimoine (Unity C#, Vuforia, Geolocalisation)
 
 Lors de mon stage de fin d'étude au LIP6, j'ai réalisé un plugin Unity permettant d'assister à la mise en oeuvre du suivi de l'apprenant dans les jeux sérieux.
 Le plugin a été réalisé pour être compatible avec le framework Entité-Composant-Système (FyFy) développé en interne afin de permettre le prototypage rapide des projets du labo.
