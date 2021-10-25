@@ -1,8 +1,8 @@
 Madame, Monsieur,
 
 Je vous écris à la suite de votre annonce sur l'afjv pour le poste de VR Gameplay Programmer - Unity.
-Étant actuellement développeur Outil C# et Python chez Hesion, je suis actuellement à la recherche 
-d'un poste en adéquation avec mes expériences précédentes, ainsi que mes centres d'intérêts.
+Développeur Outil C# et Python chez Hesion, je suis actuellement à la recherche 
+d'un poste qui soit davantage en adéquation avec mes expériences précédentes, ainsi que mes centres d'intérêts.
 
 Mon expérience chez Hesion m'a permis de développer mes compétences techniques au sein d'une équipe R&D IA et systèmes embarqués, 
 notament au travers de scripts pour l’entraînement de modèles de DeepLearning et leurs optimisations pour une utilisation sur notre matériel embarqué.
