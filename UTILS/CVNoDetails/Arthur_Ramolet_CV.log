@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Debian) (preloaded format=pdflatex 2021.10.20)  27 OCT 2021 15:07
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Debian) (preloaded format=pdflatex 2021.10.20)  27 OCT 2021 15:22
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -857,11 +857,11 @@ Package rerunfilecheck Info: File `Arthur_Ramolet_CV.out' has not changed.
 (rerunfilecheck)             Checksum: 4494F87EE5849C1319672F28EF84E1B5;422.
  ) 
 Here is how much of TeX's memory you used:
- 22173 strings out of 483140
- 403743 string characters out of 5965150
+ 22171 strings out of 483140
+ 403723 string characters out of 5965150
  679504 words of memory out of 5000000
  36741 multiletter control sequences out of 15000+600000
- 592853 words of font info for 76 fonts, out of 8000000 for 9000
+ 592770 words of font info for 75 fonts, out of 8000000 for 9000
  36 hyphenation exceptions out of 8191
  76i,11n,68p,783b,340s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texmf/fonts/enc/dvips/lm/lm-ec.enc}</usr/share/texmf/fonts/type1/
@@ -870,7 +870,7 @@ are/texmf/fonts/type1/public/lm/lmr12.pfb></usr/share/texmf/fonts/type1/public/
 lm/lmr17.pfb></usr/share/texmf/fonts/type1/public/lm/lmro10.pfb></usr/share/tex
 mf/fonts/type1/public/lm/lmro17.pfb></usr/share/texlive/texmf-dist/fonts/type1/
 public/marvosym/marvosym.pfb>
-Output written on Arthur_Ramolet_CV.pdf (1 page, 182519 bytes).
+Output written on Arthur_Ramolet_CV.pdf (1 page, 182515 bytes).
 PDF statistics:
  68 PDF objects out of 1000 (max. 8388607)
  57 compressed objects within 1 object stream
