@@ -2,25 +2,26 @@ Madame, Monsieur,
 
 Je vous écris à la suite de votre annonce sur l'afjv pour le poste de VR Gameplay Programmer - Unity.
 Développeur Outil C# et Python chez Hesion, je suis actuellement à la recherche 
-d'un poste qui soit davantage en adéquation avec mes expériences précédentes, ainsi que mes centres d'intérêts.
+d'un poste davantage en adéquation avec mes expériences précédentes, ainsi que mes centres d'intérêt.
 
-Mon expérience chez Hesion m'a permis de développer mes compétences techniques au sein d'une équipe R&D IA et systèmes embarqués, 
-notament au travers de scripts pour l’entraînement de modèles de DeepLearning et leurs optimisations pour une utilisation sur notre matériel embarqué.
-Afin de répondre aux besoins du deep learning nous avons développés des outils pour l'annotation et l'évaluation des méta-données issues des sites clients.
+Mon expérience chez Hesion m'a permis de développer mes compétences en Programmation orientée objet, C#, Python et DevOps au sein d'une équipe R&D
+afin de réaliser l'évolution du système d'intelligence artificielle pour le guidage à la place sur nos solutions embarquées.
+La mise en oeuvre de modèles de DeepLearning et leurs optimisations nous ont permis de répondre à des problématiques de classification d'occupation de place, de détection et de lecture de plaque.
+Nous avons également développés des outils en C# pour l'annotation et l'évaluation des méta-données issues des sites clients pour l'entrainement des modèles.
 Avec l'aide de l'équipe DevOps, nous avons architecturé une solution afin d'automatiser le processus de gestion des données et d'apprentissage des modèles.
 
-En tant qu'ingénieur de recherche au Serious Game Research Lab de l'Université Champollion, j'ai pu mettre à contribution mes compétences en Unity C# avec l'aide des experts en ingénerie pédagogique 
-pour développer le prototype d'un jeu sérieux "Clone" pour la formation du personnel infirmier à l'organisation de l'emploi du temps. 
-Nous avons également réalisé en parallère un prototype de jeu controllé par un vélo d'appartement connecté,
-participé au portage du jeu sérieux MECAGENIUS de flash vers Unity et tutoré les étudiants du master AMINJ à la réalisation d'une application AR de découverte du patrimoine (Unity C#, Vuforia, Geolocalisation)
+Précédemment, en tant qu'ingénieur de recherche au Serious Game Research Lab de l'Université Champollion, j'ai pu mettre à contribution mes compétences en Unity C# avec l'aide des experts 
+en ingénierie pédagogique pour développer le prototype d'un jeu sérieux "Clone" pour la formation du personnel infirmier à l'organisation de l'emploi du temps. 
+Nous avons également réalisé en parallèle un prototype de jeu contrôlé par un vélo d'appartement connecté,
+participé au portage du jeu sérieux MECAGENIUS de flash vers Unity et tutoré les étudiants du master AMINJ à la réalisation d'une application AR de découverte du patrimoine avec Vuforia.
 
-Lors de mon stage de fin d'étude au LIP6, j'ai réalisé un plugin Unity permettant d'assister à la mise en oeuvre du suivi de l'apprenant dans les jeux sérieux.
+Enfin, lors de mon stage de fin d'étude au LIP6, j'ai réalisé un plugin Unity permettant d'assister à la mise en oeuvre du suivi de l'apprenant dans les jeux sérieux.
 Le plugin a été réalisé pour être compatible avec le framework Entité-Composant-Système (FyFy) développé en interne afin de permettre le prototypage rapide des projets du labo.
 Nous avons mis en application ces outils pour développer la visite virtuelle de l'IUT de Chambéry sur HTC-Vive.
 
 Motivé par la collaboration avec les experts des différents métiers chez Novelab et le challenge technique qu'implique le développement d'applications XR, 
 rejoindre votre équipe sera pour nous l'opportunité de partager nos compétences afin de réaliser des univers interactifs engageants.
-Je suis également motivé par la possibilité de progresser sur de nouvelles spécialisations présentées dans votre offre comme l'IK et le développement de Shaders.
+Je suis également motivé par la possibilité de progresser sur de nouvelles spécialisations présentées dans votre offre comme l'IK et l'implémentation de Shaders.
 
 C'est avec plaisir que je vous rencontrerai pour vous exposer davantage mes motivations pour ce poste.
 
