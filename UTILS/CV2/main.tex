@@ -34,8 +34,16 @@
 %% folder.
 
 
+
+
 % Change the page layout if you need to
-\geometry{left=1cm,right=9cm,marginparwidth=6.8cm,marginparsep=1.2cm,top=1.25cm,bottom=1.25cm,footskip=2\baselineskip}
+\geometry{left=9cm,right=1cm,marginparwidth=6.8cm,marginparsep=1.2cm,top=1.25cm,bottom=1.25cm,footskip=2\baselineskip}
+
+\reversemarginpar
+\patchcmd{\fullwidth}
+  {\begin{adjustwidth}{}{\dimexpr-\marginparwidth-\marginparsep\relax}}
+  {\begin{adjustwidth}{\dimexpr-\marginparwidth-\marginparsep\relax}{}}
+  {}{}
 
 % Change the font if you want to.
 
@@ -106,38 +114,39 @@
 
 \cvsection[page1sidebar]{Expériences}
 
+\cvevent{Développeur outils Python C\#}{Hesion}{Juin 2020 -- Novembre 2021}{Achères}Développement d'outils pour la gestion des données internes ainsi que l'automatisation des processus de collecte et traitement des données.
+
+\divider
+
+\cvevent{IT Manager}{Kylotonn Racing}{Janvier 2020 -- Février 2020}{Paris}
+Gestion, maintenance et amélioration du parc informatique.
+
+\divider
+
+
 \cvevent{Ingénieur de recherche - Développeur Unity C\#}{Université Champollion - Equipe SGRL}{Janvier 2018 -- Janvier 2019}{Albi}
-\begin{itemize}
-\item Développement du jeu sérieux \underline{\href{https://www.univ-jfc.fr/actu/clone-un-serious-game-dedie-lorganisation-du-travail-en-milieu-hospitalier}{Clone}} en Unity C\# pour la formation du personnel infirmier.
-\item Intégration web du build Unity pour récupération et analyse des traces de jeu.
-\item Prototypage Unity pour contrôles de jeu avec un vélo d'appartement.
-\item Formation des étudiants du Master AMINJ à l'utilisation d'Unity.
-\end{itemize}
+Développement du jeu sérieux \href{https://www.univ-jfc.fr/actu/clone-un-serious-game-dedie-lorganisation-du-travail-en-milieu-hospitalier}{Clone} pour la formation du personnel infirmier à l'organisation de l'emploi du temps.
 
 \divider
 
 \cvevent{Stage recherche - Développeur Unity C\#}{LIP6 - Equipe MOCAH}{Février 2017 -- Août 2017}{Paris}
-\begin{itemize}
-\item Développement d'un Plug-in Unity pour assister la génération de traces dans les jeux sérieux.
-\item Développement de la visite de l'IUT de Chambéry en réalité virtuelle.
-\end{itemize}
+Du formalisme Entité - Composant - Système à la modélisation d’un Serious Game par un réseau de Petri.
 
 \divider
 
 \cvevent{Stage consultant systèmes d’informations}{Synergie Associés}{Juin 2013 -- Août 2013}{Pontault-Combault}
-\begin{itemize}
-\item Refonte du système d'information de la mairie de Pontault-Combault pour simplifier les inscriptions pédagogiques et prendre en charge les temps périscolaires. 
-\end{itemize}
+Refonte du système d'information de la mairie de Pontault-Combault.
 
-\cvsection{Projets}
+\cvsection{Études}
 
-\cvevent{\underline{\href{https://ntzschbtzsch.itch.io/axe-and-roses}{Axe and roses}}}{Ludum Dare 41 - Développeur principal, Game Designer}{Avril 2018}{}{Dating simulator chez les barbares.}
+\cvevent{Master ANDROIDE}{Université Pierre et Marie Curie}{Sept 2014 -- Juin 2017}{}
+Jeux Sérieux, Environnements de simulation, Interaction homme-machine, Systèmes multi-agents, Traitement de l'image.
+
 \divider
 
-\cvevent{\underline{\href{https://hippunk.github.io/platypus/index.html}{Didgeribug}}}{Ludum Dare 40 - Développeur principal}{Décembre 2017}{}{Shoot 'em up avec des insectes.}
-\divider
+\cvevent{Licence Sciences pour l'ingénieur}{Université du Maine}{Sept 2010 -- Juin 2014}{}
+Programmation structurelle et orienté objet, Base de données, Traitement du Signal, Génie logiciel, Réseaux télécoms, Administration système. 
 
-\cvevent{\underline{\href{https://hippunk.itch.io/immunowars}{ImmunoWars}}}{Serious Game étudiant - Développeur, Game Designer}{Novembre à Décembre 2016}{}{Jeu de stratégie sur le fonctionnement des défenses immunitaires.}
 
 \medskip
 
