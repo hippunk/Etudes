@@ -1,17 +1,28 @@
-Bonjour,
+Madame, Monsieur,
 
-Quantic Dream recherche actuellement un Programmeur Unity C# R&D, c'est donc suite à votre offre que je vous propose ma candidature à ce poste.
+Je vous écris à la suite de votre annonce sur l'afjv pour le poste de Développeur Outils Devops.
+Auparavant développeur Outil C# et Python chez Hesion, je suis actuellement à la recherche 
+d'un poste davantage en adéquation avec mes expériences précédentes, ainsi que mes centres d'intérêt.
 
-J'ai travaillé sur de nombreux projets professionnels et personnels en Unity C# notamment le jeu sérieux Clone pour la formation du personnel infirmier 
-ainsi que de multiples participations à des Game Jams. Vous pourrez trouver le détail de ces différents projets dans le CV ci-joint.
+Mon expérience chez Hesion m'a permis de développer mes compétences en Programmation orientée objet, C#, Python et DevOps au sein d'une équipe R&D
+afin de réaliser l'évolution du système d'intelligence artificielle pour le guidage à la place sur nos solutions embarquées.
+La mise en œuvre de modèles de DeepLearning et leurs optimisations nous ont permis de répondre à des problématiques de classification d'occupation de place, de détection et de lecture de plaque.
+Nous avons également développés des outils en C# pour l'annotation et l'évaluation des méta-données issues des sites clients pour l'entrainement des modèles.
+Avec l'aide de l'équipe DevOps, nous avons architecturé une solution afin d'automatiser le processus de gestion des données et d'apprentissage des modèles.
 
-Je dispose également de très bonnes compétences en Intelligence artificielle, en Réseaux/Administration Système acquises au cours de mon Master,  
-ainsi que des bases en graphisme et modélisation 3D que j'ai pu développer sur mes projets personnels.
+Précédemment, en tant qu'ingénieur de recherche au Serious Game Research Lab de l'Université Champollion, j'ai pu mettre à contribution mes compétences en Unity C# avec l'aide des experts 
+en ingénierie pédagogique pour développer le prototype d'un jeu sérieux "Clone" pour la formation du personnel infirmier à l'organisation de l'emploi du temps. 
+Nous avons également réalisé en parallèle un prototype de jeu contrôlé par un vélo d'appartement connecté,
+participé au portage du jeu sérieux MECAGENIUS de flash vers Unity et tutoré les étudiants du master AMINJ à la réalisation d'une application AR de découverte du patrimoine avec Vuforia.
 
-Pour faire plus court, je dirais que mes principaux atouts sont d'être capable d'apprendre de nouvelles compétences rapidement 
-lorsque je suis confronté à de nouveaux problèmes et de prototyper rapidement afin de faire de la preuve de concept.
+Enfin, lors de mon stage de fin d'étude au LIP6, j'ai réalisé un plugin Unity permettant d'assister à la mise en oeuvre du suivi de l'apprenant dans les jeux sérieux.
+Le plugin a été réalisé pour être compatible avec le framework Entité-Composant-Système (FyFy) développé en interne afin de permettre le prototypage rapide des projets du labo.
+Nous avons mis en application ces outils pour développer la visite virtuelle de l'IUT de Chambéry sur HTC-Vive.
 
-Je serais ravi de vous rencontrer afin de vous présenter mon profil en détail et faire davantage connaissance.
+Motivé par la collaboration avec les experts des différents métiers chez Quantic Dream et le challenge technique qu'implique 
+l'amélioration des outils internes et de l'infrastructure dédiés aux autres équipes/ services R&D.
+rejoindre votre équipe sera pour nous l'opportunité de partager nos compétences afin de réaliser des univers interactifs engageants.
 
-Cordialement,
-Arthur Ramolet
+C'est avec plaisir que je vous rencontrerai pour vous exposer davantage mes motivations pour ce poste.
+
+Je vous prie d'agréer, Madame, Monsieur, l'expression de mes salutations distinguées.

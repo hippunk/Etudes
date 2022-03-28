@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 21.12) (preloaded format=pdflatex 2022.1.5)  15 MAR 2022 13:11
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 21.12) (preloaded format=pdflatex 2022.1.5)  27 MAR 2022 15:40
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1437,13 +1437,13 @@ LaTeX Font Info:    Font shape `T1/lato-TLF/m/n' will be
 LaTeX Font Info:    Font shape `T1/lato-TLF/b/n' will be
 (Font)              scaled to size 17.28pt on input line 19.
 LaTeX Font Info:    Font shape `T1/lato-TLF/b/n' will be
-(Font)              scaled to size 10.0pt on input line 50.
+(Font)              scaled to size 10.0pt on input line 52.
 LaTeX Font Info:    External font `cmex7' loaded for size
-(Font)              <7> on input line 64.
+(Font)              <7> on input line 66.
 LaTeX Font Info:    External font `cmex7' loaded for size
-(Font)              <5> on input line 64.
+(Font)              <5> on input line 66.
 LaTeX Font Info:    Font shape `T1/lato-TLF/m/n' will be
-(Font)              scaled to size 9.0pt on input line 64.
+(Font)              scaled to size 9.0pt on input line 66.
 )
 [1
 
@@ -1457,7 +1457,7 @@ Package logreq Info: Writing requests to 'main.run.xml'.
 Here is how much of TeX's memory you used:
  32684 strings out of 478659
  640393 string characters out of 2862403
- 1385751 words of memory out of 3000000
+ 1386751 words of memory out of 3000000
  50305 multiletter control sequences out of 15000+600000
  648884 words of font info for 51 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
@@ -1467,7 +1467,7 @@ wesome/fontawesometwo.enc}{C:/MiKTeX/fonts/enc/dvips/fontawesome/fontawesomeone
 .enc}<C:/MiKTeX/fonts/type1/public/fontawesome/FontAwesome.pfb><C:/MiKTeX/fonts
 /type1/typoland/lato/Lato-Bold.pfb><C:/MiKTeX/fonts/type1/typoland/lato/Lato-Re
 gular.pfb>
-Output written on main.pdf (1 page, 94951 bytes).
+Output written on main.pdf (1 page, 95494 bytes).
 PDF statistics:
  42 PDF objects out of 1000 (max. 8388607)
  2 named destinations out of 1000 (max. 500000)
