@@ -1,0 +1,30 @@
+Madame, Monsieur,
+
+Auparavant développeur Outil C# et Python chez Hesion et suite à un licenciement économique au sein de l'entreprise, je suis actuellement en recherche active d'emploi sur Paris. 
+Recherchant un poste davantage en adéquation avec mes expériences précédentes et mes centres d'intérêt, j'ai découvert Histovery et suis très intéressé par l'opportunité de 
+développer des expériences en réalité augmentée permettant de faire la promotion de la culture et du patrimoine.
+C'est pourquoi je vous contacte aujourd'hui afin de vous proposer ma candidature spontanée pour rejoindre vos équipes en tant que développeur Unity C# ou développeur outils DevOps.
+
+Mon expérience chez Hesion m'a permis de développer mes compétences en programmation orientée objet, C#, Python et DevOps au sein d'une équipe R&D
+afin de réaliser l'évolution du système d'intelligence artificielle pour le guidage à la place sur nos solutions embarquées.
+La mise en œuvre de modèles de DeepLearning et leurs optimisations nous ont permis de répondre à des problématiques de classification d'occupation de place, de détection et de lecture de plaque.
+Nous avons également développé des outils en C# pour l'annotation et l'évaluation des méta-données issues des sites clients pour l'entrainement des modèles.
+Avec l'aide de l'équipe DevOps, nous avons architecturé une solution afin d'automatiser le processus de gestion des données et d'apprentissage des modèles.
+
+Précédemment, en tant qu'ingénieur de recherche au Serious Game Research Lab de l'Université Champollion, j'ai pu mettre à contribution mes compétences en Unity C# avec l'aide des experts 
+en ingénierie pédagogique pour développer le prototype d'un jeu sérieux "Clone" pour la formation du personnel infirmier à l'organisation de l'emploi du temps. 
+Nous avons également réalisé en parallèle un prototype de jeu contrôlé par un vélo d'appartement connecté,
+participé au portage du jeu sérieux MECAGENIUS de flash vers Unity et tutoré les étudiants du master AMINJ à la réalisation d'une application AR de découverte du patrimoine avec Vuforia.
+
+Enfin, lors de mon stage de fin d'études au LIP6, j'ai réalisé un plugin Unity permettant d'assister à la mise en oeuvre du suivi de l'apprenant dans les jeux sérieux.
+Le plugin a été réalisé pour être compatible avec le framework Entité-Composant-Système (FyFy) développé en interne afin de permettre le prototypage rapide des projets du labo.
+Nous avons mis en application ces outils pour développer la visite virtuelle de l'IUT de Chambéry sur HTC-Vive.
+
+Motivé par la collaboration avec les experts des différents métiers chez Histovery et le challenge technique qu'implique 
+le développement de visites augmentées sur mesure destinées à permettre au grand public de redécouvrir la richesse du patrimoine culturel,
+rejoindre votre équipe sera pour nous l'opportunité de partager nos compétences afin de réaliser des expériences interactives engageantes.
+
+C'est avec plaisir que je vous rencontrerai pour vous exposer davantage mes motivations pour notre future collaboration.
+Aussi, si vous êtes en contact avec d'autres partenaires qui pourraient être intéressés par mon profil n'hésitez pas à nous mettre en relation.
+
+Je vous prie d'agréer, Madame, Monsieur, l'expression de mes salutations distinguées.

@@ -1,0 +1,24 @@
+Madame, Monsieur,
+
+Auparavant développeur Outil C# et Python chez Hesion, je suis actuellement à la recherche 
+d'un poste davantage en adéquation avec mes expériences précédentes, ainsi que mes centres d'intérêt. 
+C'est ainsi que votre annonce sur à retenu mon attention.
+
+Mon expérience chez Hesion m'a permis de développer mes compétences en programmation orientée objet, C#, Python et DevOps au sein d'une équipe R&D
+afin de réaliser l'évolution du système d'intelligence artificielle pour le guidage à la place sur nos solutions embarquées.
+La mise en oeuvre de modèles de DeepLearning et leur optimisation nous ont permis de répondre à des problématiques de classification d'occupation de place, de détection et de lecture de plaques.
+Nous avons également développé des outils en C# pour l'annotation et l'évaluation des méta-données issues des sites clients pour l'entraînement des modèles.
+Avec l'aide de l'équipe DevOps, nous avons architecturé une solution afin d'automatiser le processus de gestion des données et d'apprentissage des modèles.
+
+Précédemment, en tant qu'ingénieur de recherche au Serious Game Research Lab de l'Université Champollion, j'ai pu mettre à contribution mes compétences en Unity C#. Avec l'aide des experts 
+en ingénierie pédagogique, nous avons développé le prototype d'un jeu sérieux "Clone" pour la formation du personnel infirmier à l'organisation de l'emploi du temps. 
+Nous avons également réalisé en parallèle un prototype de jeu contrôlé par un vélo d'appartement connecté,
+participé au portage du jeu sérieux MECAGENIUS de Flash vers Unity et tutoré les étudiants du master AMINJ à la réalisation d'une application AR de découverte du patrimoine avec Vuforia.
+
+Cherchant à mettre mes compétences à contribution d'un projet humain et d'envergure européenne, je suis motivé par l'opportunité de travailler avec les experts des différents 
+métiers de l'Assistance Publique - Hôpitaux de Paris - DSI et le challenge technique qu'implique le développement le plus large entrepôt public de données de santé.
+
+C'est avec plaisir que je vous rencontrerai pour vous exposer davantage mes motivations pour ce poste.
+
+Cordialement,
+Arthur Ramolet
